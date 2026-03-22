@@ -258,25 +258,25 @@ body.chov #cur-ring{width:54px;height:54px}
 ════════════════════════════════════════════════ */
 #s05{background:var(--d1)}
 #s05 .s-bg{background-image:url('Photos/Optimized/83 battle (1 of 1).jpg');opacity:.07}
-.purse-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:14px;flex:1;min-height:0}
-.purse-panel{background:var(--d2);padding:28px 24px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.purse-grid{display:flex;gap:3px;margin-top:10px;flex:1;min-height:0;overflow:hidden}
+.purse-panel{background:var(--d2);padding:14px 14px;position:relative;overflow:hidden;display:flex;flex-direction:column;flex:1}
 .purse-panel:hover{background:var(--d3)}
-.purse-panel-title{font-family:var(--race);font-size:18px;letter-spacing:.04em;color:var(--wh);margin-bottom:14px}
+.purse-panel-title{font-family:var(--race);font-size:15px;letter-spacing:.04em;color:var(--wh);margin-bottom:8px}
 .purse-panel-title em{color:var(--accent);font-style:normal}
 .purse-table{width:100%;border-collapse:collapse}
-.purse-table th{text-align:left;padding:6px 8px;font-size:7px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.28);border-bottom:1px solid rgba(255,255,255,.06)}
-.purse-table td{padding:5px 8px;border-bottom:1px solid rgba(255,255,255,.04);font-size:11px;color:rgba(255,255,255,.62)}
-.purse-table td:nth-child(2),.purse-table td:nth-child(3){color:var(--accent);font-family:var(--race);font-size:13px}
-.purse-total{margin-top:12px;padding:10px 12px;background:rgba(245,255,0,.06);border:1px solid rgba(245,255,0,.15);border-radius:2px;display:flex;justify-content:space-between;align-items:center}
-.purse-total-lbl{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5)}
-.purse-total-n{font-family:var(--race);font-size:20px;color:var(--accent)}
-.prog-bonus{background:linear-gradient(160deg,rgba(245,255,0,.08),rgba(245,255,0,.02));border:1px solid rgba(245,255,0,.2);padding:28px 24px;grid-column:1/-1;display:flex;flex-direction:column}
-.prog-bonus-h{font-family:var(--race);font-size:22px;color:var(--accent);margin-bottom:6px}
-.prog-bonus-desc{font-size:11px;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:12px}
+.purse-table th{text-align:left;padding:3px 6px;font-size:6.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28);border-bottom:1px solid rgba(255,255,255,.06)}
+.purse-table td{padding:3px 6px;border-bottom:1px solid rgba(255,255,255,.03);font-size:10px;color:rgba(255,255,255,.55)}
+.purse-table td:nth-child(2),.purse-table td:nth-child(3){color:var(--accent);font-family:var(--race);font-size:11px}
+.purse-total{margin-top:auto;padding:7px 10px;background:rgba(245,255,0,.06);border:1px solid rgba(245,255,0,.15);border-radius:2px;display:flex;justify-content:space-between;align-items:center}
+.purse-total-lbl{font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.purse-total-n{font-family:var(--race);font-size:17px;color:var(--accent)}
+.prog-bonus{background:linear-gradient(160deg,rgba(245,255,0,.08),rgba(245,255,0,.02));border:1px solid rgba(245,255,0,.2);padding:14px 14px;flex:1.2;display:flex;flex-direction:column}
+.prog-bonus-h{font-family:var(--race);font-size:15px;color:var(--accent);margin-bottom:4px}
+.prog-bonus-desc{font-size:9px;color:rgba(255,255,255,.5);line-height:1.5;margin-bottom:8px}
 .prog-table{width:100%;border-collapse:collapse}
-.prog-table th{text-align:center;padding:5px 6px;font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);border-bottom:1px solid rgba(255,255,255,.06)}
-.prog-table td{text-align:center;padding:4px 6px;font-size:10px;color:rgba(255,255,255,.5);border-bottom:1px solid rgba(255,255,255,.03)}
-.prog-table td:first-child{color:var(--accent);font-family:var(--race);font-size:12px;text-align:left}
+.prog-table th{text-align:center;padding:3px 4px;font-size:6.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.3);border-bottom:1px solid rgba(255,255,255,.06)}
+.prog-table td{text-align:center;padding:3px 4px;font-size:9px;color:rgba(255,255,255,.45);border-bottom:1px solid rgba(255,255,255,.03)}
+.prog-table td:first-child{color:var(--accent);font-family:var(--race);font-size:10px;text-align:left}
 .prog-table tr:last-child td{color:var(--accent);font-weight:700}
 
 /* ════════════════════════════════════════════════
@@ -553,17 +553,18 @@ body.chov #cur-ring{width:54px;height:54px}
 
   /* S05 PURSE */
   #s05 .si-wrap{gap:0!important}
-  .purse-grid{grid-template-columns:1fr!important;gap:2px!important;margin-top:8px!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch}
-  .purse-panel{padding:14px 14px!important}
-  .purse-panel-title{font-size:14px!important;margin-bottom:8px!important}
-  .purse-table td{padding:4px 6px!important;font-size:10px!important}
-  .purse-table td:nth-child(2),.purse-table td:nth-child(3){font-size:11px!important}
-  .purse-total{padding:8px 10px!important;margin-top:8px!important}
-  .purse-total-n{font-size:16px!important}
-  .prog-bonus{padding:14px 14px!important}
-  .prog-bonus-h{font-size:16px!important}
-  .prog-bonus-desc{font-size:9px!important;margin-bottom:6px!important}
-  .prog-table td,.prog-table th{padding:3px 4px!important;font-size:8px!important}
+  .purse-grid{flex-direction:column!important;gap:2px!important;margin-top:6px!important}
+  .purse-panel{padding:10px 12px!important}
+  .purse-panel-title{font-size:12px!important;margin-bottom:4px!important}
+  .purse-table td{padding:2px 5px!important;font-size:9px!important}
+  .purse-table th{padding:2px 5px!important}
+  .purse-table td:nth-child(2),.purse-table td:nth-child(3){font-size:9px!important}
+  .purse-total{padding:6px 8px!important}
+  .purse-total-n{font-size:14px!important}
+  .prog-bonus{padding:10px 12px!important}
+  .prog-bonus-h{font-size:12px!important}
+  .prog-bonus-desc{font-size:8px!important;margin-bottom:4px!important}
+  .prog-table td,.prog-table th{padding:2px 3px!important;font-size:7px!important}
 
   /* S06 BROADCAST */
   #s06 .si-wrap{flex-direction:column!important;padding:28px 18px 18px!important;position:relative!important}
@@ -895,8 +896,8 @@ body.chov #cur-ring{width:54px;height:54px}
     <div class="s-bnum">05</div>
     <div class="si-wrap rpad">
       <div class="s-label si" style="--d:.3s">Money on the Line</div>
-      <div class="s-title si" style="--d:.4s;margin-top:10px">Pro <em>Purse</em> &amp; Championship Bonus</div>
-      <div class="purse-grid" style="gap:12px">
+      <div class="s-title si" style="--d:.4s;margin-top:4px">Pro <em>Purse</em> &amp; Championship Bonus</div>
+      <div class="purse-grid">
         <div class="purse-panel si" style="--d:.48s">
           <div class="purse-panel-title"><em>Open Pro</em></div>
           <table class="purse-table">
