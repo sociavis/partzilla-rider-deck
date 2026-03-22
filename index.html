@@ -143,38 +143,34 @@ body.chov #cur-ring{width:54px;height:54px}
    SLIDE 01 — COVER
 ════════════════════════════════════════════════ */
 #s01{background:var(--blk)}
-.cv-photo{position:absolute;inset:0;z-index:0;overflow:hidden;opacity:.3;filter:saturate(.4)}
+.cv-photo{position:absolute;inset:0;z-index:0;overflow:hidden;opacity:.35;filter:saturate(.5)}
 .cv-photo iframe{position:absolute;top:50%;left:50%;width:180%;height:180%;transform:translate(-50%,-50%);pointer-events:none;border:0}
 .cv-grid{position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(245,255,0,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(245,255,0,.02) 1px,transparent 1px);background-size:72px 72px;animation:cvGrid 22s linear infinite}
 @keyframes cvGrid{to{background-position:72px 72px}}
-.cv-vignette{position:absolute;inset:0;z-index:2;background:linear-gradient(135deg,rgba(8,8,8,.9) 0%,rgba(8,8,8,.4) 40%,rgba(8,8,8,.2) 60%,rgba(8,8,8,.75) 100%)}
-/* ── SPLIT LAYOUT ── */
-.cv-center{position:relative;z-index:3;height:100%;width:100%;display:flex;flex-direction:row;align-items:stretch;padding:0;gap:0}
-.cv-left{flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:60px 56px 56px 72px;position:relative}
-.cv-left::after{content:'';position:absolute;top:15%;right:0;bottom:15%;width:1px;background:rgba(255,255,255,.06)}
-.cv-right{width:38%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 48px 48px 48px;gap:0;text-align:center}
-.cv-logo-c{width:clamp(200px,20vw,280px);filter:drop-shadow(0 6px 40px rgba(0,0,0,.6));transform:none}
+.cv-vignette{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse at 50% 46%,transparent 22%,rgba(8,8,8,.78) 78%)}
+.cv-center{position:relative;z-index:3;height:100%;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:56px 80px;gap:0}
+.cv-logo-c{width:clamp(240px,24vw,340px);filter:drop-shadow(0 6px 40px rgba(0,0,0,.6));transform:translateX(-14px)}
 .cv-series{font-family:var(--race);font-size:clamp(9px,1vw,13px);letter-spacing:.3em;color:rgba(255,255,255,.45);margin-top:22px;text-transform:uppercase}
-.cv-rule{display:flex;align-items:center;gap:16px;margin:16px 0 14px;width:fit-content}
+.cv-rule{display:flex;align-items:center;gap:16px;margin:20px 0 18px;width:fit-content;align-self:center}
 .cv-rule-line{width:60px;height:1px;background:rgba(255,255,255,.12)}
 .cv-rule-diamond{width:5px;height:5px;background:var(--accent);transform:rotate(45deg);flex-shrink:0;box-shadow:0 0 8px rgba(245,255,0,.5)}
-.cv-year{font-family:var(--race);font-size:clamp(90px,12vw,160px);line-height:.82;letter-spacing:-.02em;color:var(--accent);text-shadow:0 0 80px rgba(245,255,0,.12)}
-.cv-year-dash{color:rgba(255,255,255,.25);font-size:.6em}
-.cv-spons{font-family:var(--race);font-size:clamp(13px,1.6vw,20px);letter-spacing:.28em;color:var(--wh);margin-top:14px;text-shadow:0 2px 16px rgba(0,0,0,.5)}
-.cv-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:22px;width:100%;max-width:280px}
-.cv-stat{padding:12px 14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);text-align:center}
-.cv-stat-n{font-family:var(--race);font-size:clamp(14px,1.6vw,18px);color:var(--wh);letter-spacing:.03em}
+.cv-year{font-family:var(--race);font-size:clamp(50px,7vw,80px);line-height:.9;letter-spacing:.02em;color:var(--accent);text-shadow:0 0 60px rgba(245,255,0,.15)}
+.cv-year-dash{color:#fff}
+.cv-spons{font-family:var(--race);font-size:clamp(14px,1.8vw,22px);letter-spacing:.22em;color:var(--wh);margin-top:10px;text-shadow:0 2px 16px rgba(0,0,0,.5)}
+.cv-stats{display:flex;align-items:stretch;gap:1px;margin-top:28px;width:fit-content;align-self:center}
+.cv-stat{padding:10px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);text-align:center;min-width:90px}
+.cv-stat-n{font-family:var(--race);font-size:clamp(13px,1.6vw,18px);color:var(--wh);letter-spacing:.03em}
 .cv-stat-l{font-size:7px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.32);margin-top:3px}
 .cv-creds{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:22px}
-.cv-cred-logo{height:60px;width:auto;opacity:.85;transition:opacity .3s}
+.cv-cred-logo{height:110px;width:auto;opacity:.85;transition:opacity .3s}
 .cv-cred-logo:hover{opacity:1}
-.cv-website{font-family:var(--race);font-size:clamp(10px,1.2vw,14px);letter-spacing:.22em;color:rgba(255,255,255,.45);margin-top:16px;text-transform:lowercase}
+.cv-website{font-family:var(--race);font-size:clamp(10px,1.2vw,14px);letter-spacing:.22em;color:rgba(255,255,255,.45);margin-top:14px;text-transform:lowercase}
 .cv-website a{color:rgba(255,255,255,.45);text-decoration:none;transition:color .3s}
 .cv-website a:hover{color:var(--accent)}
-.cv-social{display:flex;gap:14px;margin-top:14px;align-items:center}
+.cv-social{display:flex;gap:14px;margin-top:18px;align-items:center}
 .cv-social a{color:rgba(255,255,255,.4);transition:color .3s;display:flex}
 .cv-social a:hover{color:var(--accent)}
-.cv-social svg{width:18px;height:18px}
+.cv-social svg{width:20px;height:20px}
 
 /* ════════════════════════════════════════════════
    SLIDE 02 — WHY RACE WITH US
@@ -469,22 +465,20 @@ body.chov #cur-ring{width:54px;height:54px}
   div[style*="width:50%"]{width:100%!important}
 
   /* S01 COVER */
-  .cv-center{flex-direction:column!important;padding:0!important;overflow:hidden!important}
-  .cv-left{flex:none!important;padding:20px 20px 12px!important;justify-content:flex-end!important;flex:1!important}
-  .cv-left::after{display:none!important}
-  .cv-right{width:100%!important;flex:none!important;padding:10px 20px 16px!important;gap:0!important}
-  .cv-logo-c{width:clamp(140px,44vw,200px)!important;margin-bottom:6px}
-  .cv-rule{margin:6px 0!important}
-  .cv-rule-line{width:30px}
-  .cv-year{font-size:clamp(48px,14vw,72px)!important;line-height:.82!important}
-  .cv-spons{font-size:clamp(8px,2.4vw,12px)!important;letter-spacing:.18em!important;margin-top:6px!important}
-  .cv-creds{gap:16px!important;margin-top:8px!important}
-  .cv-cred-logo{height:36px!important;width:auto!important}
-  .cv-website{font-size:9px!important;margin-top:6px!important}
-  .cv-social{gap:12px!important;margin-top:6px!important}
+  .cv-center{padding:24px 20px!important;gap:0!important;justify-content:center!important;align-items:center!important;overflow:hidden!important}
+  .cv-logo-c{width:clamp(160px,52vw,240px)!important;margin-bottom:10px;transform:translateX(-10px)}
+  .cv-rule-2{display:flex!important}
+  .cv-rule{margin:8px 0!important}
+  .cv-rule-line{width:40px}
+  .cv-year{font-size:clamp(36px,10vw,54px)!important;line-height:.9!important}
+  .cv-spons{font-size:clamp(8px,2.4vw,12px)!important;letter-spacing:.15em!important;margin-top:6px!important}
+  .cv-creds{flex-direction:row!important;gap:18px!important;flex-wrap:nowrap!important;justify-content:center!important;margin-top:12px!important}
+  .cv-cred-logo{height:40px!important;width:auto!important}
+  .cv-website{font-size:9px!important;margin-top:8px!important}
+  .cv-social{gap:12px!important;margin-top:8px!important}
   .cv-social svg{width:16px;height:16px}
-  .cv-stats{display:grid!important;grid-template-columns:1fr 1fr!important;gap:3px!important;width:100%!important;max-width:260px!important;margin-top:10px!important}
-  .cv-stat{min-width:unset!important;padding:7px 10px!important}
+  .cv-stats{display:grid!important;grid-template-columns:1fr 1fr!important;gap:5px!important;width:100%!important;max-width:290px!important;align-self:center!important;margin-top:10px!important}
+  .cv-stat{min-width:unset!important;padding:8px 10px!important}
   .cv-stat-n{font-size:clamp(10px,3vw,14px)!important}
   .cv-stat-l{font-size:6px!important}
   .cv-photo iframe{width:300%;height:300%}
@@ -690,38 +684,33 @@ body.chov #cur-ring{width:54px;height:54px}
     <div class="cv-grid"></div>
     <div class="cv-vignette"></div>
     <div class="cv-center">
-      <!-- LEFT: Big type -->
-      <div class="cv-left">
-        <div class="cv-rule si" style="--d:.36s">
-          <div class="cv-rule-line"></div>
-          <div class="cv-rule-diamond"></div>
-          <div class="cv-rule-line"></div>
-        </div>
-        <div class="cv-year si" style="--d:.44s">26<span class="cv-year-dash">–</span>27</div>
-        <div class="cv-spons si" style="--d:.56s">RIDER &amp; TEAM GUIDE</div>
-        <div class="cv-stats si" style="--d:.66s">
-          <div class="cv-stat"><div class="cv-stat-n">18</div><div class="cv-stat-l">Rounds</div></div>
-          <div class="cv-stat"><div class="cv-stat-n">9</div><div class="cv-stat-l">Venues</div></div>
-          <div class="cv-stat"><div class="cv-stat-n">34</div><div class="cv-stat-l">Classes</div></div>
-          <div class="cv-stat"><div class="cv-stat-n">FS1/FS2</div><div class="cv-stat-l">National TV</div></div>
-        </div>
+      <img src="Partzilla Logo lite.png" alt="Partzilla Arenacross" class="cv-logo-c si" style="--d:.3s">
+      <div class="cv-rule si" style="--d:.46s">
+        <div class="cv-rule-line"></div>
+        <div class="cv-rule-diamond"></div>
+        <div class="cv-rule-line"></div>
       </div>
-      <!-- RIGHT: Logo, creds, links -->
-      <div class="cv-right">
-        <img src="Partzilla Logo lite.png" alt="Partzilla Arenacross" class="cv-logo-c si" style="--d:.3s">
-        <div class="cv-creds si" style="--d:.52s">
-          <img src="Tristar MX Logo.png" alt="TriStar MX" class="cv-cred-logo">
-          <img src="AMA-Logo.png" alt="AMA" class="cv-cred-logo">
-        </div>
-        <div class="cv-website si" style="--d:.62s"><a href="https://partzillaarenacross.com" target="_blank">partzillaarenacross.com</a></div>
-        <div class="cv-social si" style="--d:.72s">
-          <a href="https://www.instagram.com/partzillaarenacross/" target="_blank" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C16.67.014 16.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-          <a href="https://www.facebook.com/partzillaarenacross" target="_blank" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-        </div>
-        <div id="swipe-hint">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
-          <span>Swipe Up</span>
-        </div>
+      <div class="cv-year si" style="--d:.52s">26<span class="cv-year-dash">–</span>27</div>
+      <div class="cv-spons si" style="--d:.62s">RIDER &amp; TEAM GUIDE</div>
+      <div class="cv-rule cv-rule-2 si" style="--d:.65s"><div class="cv-rule-line"></div><div class="cv-rule-diamond"></div><div class="cv-rule-line"></div></div>
+      <div class="cv-creds si" style="--d:.72s">
+        <img src="Tristar MX Logo.png" alt="TriStar MX" class="cv-cred-logo" style="height:70px">
+        <img src="AMA-Logo.png" alt="AMA" class="cv-cred-logo" style="height:70px">
+      </div>
+      <div class="cv-stats si" style="--d:.78s">
+        <div class="cv-stat"><div class="cv-stat-n">18</div><div class="cv-stat-l">Rounds</div></div>
+        <div class="cv-stat"><div class="cv-stat-n">9</div><div class="cv-stat-l">Venues</div></div>
+        <div class="cv-stat"><div class="cv-stat-n">34</div><div class="cv-stat-l">Classes</div></div>
+        <div class="cv-stat"><div class="cv-stat-n">FS1/FS2</div><div class="cv-stat-l">National TV</div></div>
+      </div>
+      <div class="cv-website si" style="--d:.84s"><a href="https://partzillaarenacross.com" target="_blank">partzillaarenacross.com</a></div>
+      <div class="cv-social si" style="--d:.88s">
+        <a href="https://www.instagram.com/partzillaarenacross/" target="_blank" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C16.67.014 16.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="https://www.facebook.com/partzillaarenacross" target="_blank" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      </div>
+      <div id="swipe-hint">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+        <span>Swipe Up</span>
       </div>
     </div>
   </div>
