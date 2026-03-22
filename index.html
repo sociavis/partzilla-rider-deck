@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AMA Partzilla Arenacross — 2026–2027 Rider & Team Guide</title>
+
+<!-- SEO -->
+<meta name="description" content="AMA Partzilla Arenacross 2026–2027 Rider & Team Guide. Everything you need to know about racing the East Coast's premier Arenacross series — schedule, classes, purse, incentives & registration.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f5ff00">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Partzilla Arenacross">
+<meta property="og:title" content="AMA Partzilla Arenacross — 2026–2027 Rider & Team Guide">
+<meta property="og:description" content="The East Coast's premier Arenacross series. AMA #1 plates, FS1 national TV, progressive purse, 34 classes. Come race with us.">
+<meta property="og:image" content="https://partzilla-arenacross.vercel.app/Cover%20v3.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AMA Partzilla Arenacross — 2026–2027 Rider & Team Guide">
+<meta name="twitter:description" content="The East Coast's premier Arenacross series. AMA #1 plates, FS1 national TV, progressive purse.">
+<meta name="twitter:image" content="https://partzilla-arenacross.vercel.app/Cover%20v3.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="Partzilla Logo lite.png">
+<link rel="apple-touch-icon" href="Partzilla Logo lite.png">
+
+
+<style>
+@font-face { font-family:'BringRace'; src:url('Bring Race.otf') format('opentype'); }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --accent:#f5ff00;--accent-dk:#c8cc00;--accent-glow:rgba(245,255,0,.35);
+  --red:#E8001D;--red-dk:#A80015;--red-glow:rgba(232,0,29,.35);
+  --blk:#080808;--d1:#111;--d2:#181818;--d3:#202020;
+  --wh:#fff;--gr:#666;--gr2:#999;--gold:#FFD700;--silver:#C0C0C0;--bronze:#CD7F32;
+  --yellow:#f5ff00;--green:#22c55e;
+  --race:'BringRace','Impact',sans-serif;
+  --body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --ease:cubic-bezier(0.16,1,0.3,1);--dur:880ms;--frame:6px;
+}
+html,body{width:100%;height:100%;overflow:hidden;overscroll-behavior:none;background:var(--blk);color:var(--wh);font-family:var(--body);cursor:none}
+::selection{background:var(--accent);color:#000}
+
+/* ── CURSOR ──────────────────────────────────── */
+#cur{position:fixed;width:10px;height:10px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s}
+#cur-ring{position:fixed;width:34px;height:34px;border:1px solid rgba(245,255,0,.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left .11s ease-out,top .11s ease-out,width .25s,height .25s,border-color .2s}
+body.chov #cur{width:18px;height:18px}
+body.chov #cur-ring{width:54px;height:54px}
+
+/* ── LOADER ──────────────────────────────────── */
+#loader{position:fixed;inset:0;z-index:9500;background:var(--blk);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;transition:transform var(--dur) var(--ease)}
+#loader.out{transform:translateY(-100%)}
+.ld-img{width:260px;opacity:0;animation:ldImgIn .7s .2s var(--ease) forwards}
+@keyframes ldImgIn{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+.ld-bar-wrap{width:200px;height:1px;background:rgba(255,255,255,.08);overflow:hidden;position:relative}
+.ld-bar{position:absolute;left:-100%;top:0;bottom:0;width:100%;background:var(--accent);animation:ldFill 1.1s .4s var(--ease) forwards}
+@keyframes ldFill{to{left:0}}
+
+/* ── GLOBAL LOGO ─────────────────────────────── */
+#g-logo{position:fixed;top:calc(var(--frame) + 20px);left:calc(var(--frame) + 28px);z-index:1000;width:118px;opacity:0;transition:opacity .5s ease;pointer-events:none}
+#g-logo.vis{opacity:.9}
+#g-logo img{width:100%;display:block;filter:drop-shadow(0 2px 8px rgba(0,0,0,.5))}
+
+/* ── FRAME BORDERS ───────────────────────────── */
+#frame-top{position:fixed;top:0;left:0;right:0;height:var(--frame);background:var(--accent);z-index:1002}
+#frame-left{position:fixed;top:0;bottom:0;left:0;width:var(--frame);background:var(--accent);z-index:1002}
+#frame-right{position:fixed;top:0;bottom:0;right:0;width:var(--frame);background:var(--accent);z-index:1002}
+
+/* ── FLASH LINE ──────────────────────────────── */
+#flash{position:fixed;inset:0;pointer-events:none;z-index:8000;overflow:hidden}
+#flash::after{content:'';position:absolute;top:0;bottom:0;left:-8px;width:3px;background:linear-gradient(to bottom,transparent,rgba(245,255,0,.8),transparent);box-shadow:0 0 18px var(--accent-glow);opacity:0;transition:none}
+#flash.go::after{animation:flashLine .7s ease-in-out}
+@keyframes flashLine{0%{left:-8px;opacity:0}15%{opacity:1}100%{left:110%;opacity:0}}
+
+/* ── SLIDE SYSTEM ────────────────────────────── */
+#slides{position:fixed;top:var(--frame);left:var(--frame);right:var(--frame);bottom:38px}
+.slide{position:absolute;inset:0;overflow:hidden;will-change:transform;transition:transform var(--dur) var(--ease),opacity .7s ease;display:flex;flex-direction:column}
+.slide[data-s="below"]{transform:translateY(100%);opacity:0;pointer-events:none}
+.slide[data-s="above"]{transform:translateY(-100%);opacity:0;pointer-events:none}
+.slide[data-s="active"]{transform:translateY(0);opacity:1;pointer-events:all}
+
+/* ── CONTENT ENTRANCE ────────────────────────── */
+.si{opacity:0;transform:translateY(16px);transition:opacity .55s ease var(--d,.3s),transform .55s ease var(--d,.3s)}
+.slide[data-s="active"] .si{opacity:1;transform:translateY(0)}
+
+/* ── SLIDE BG SYSTEM ─────────────────────────── */
+.s-bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0;transition:transform 8s ease}
+.slide[data-s="active"] .s-bg{transform:scale(1.04)}
+.s-ov{position:absolute;inset:0;z-index:1}
+
+/* ── SIDE NAV ────────────────────────────────── */
+#snav{position:fixed;right:calc(var(--frame) + 30px);top:50%;transform:translateY(-50%);z-index:1000;display:flex;flex-direction:column;align-items:flex-end;gap:16px}
+.sn-track{position:absolute;right:2px;top:10px;bottom:10px;width:1px;background:rgba(255,255,255,.05);z-index:-1}
+.sni{display:flex;align-items:center;gap:10px;cursor:none}
+.sni-lbl{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0);transition:color .3s,transform .3s;transform:translateX(8px);white-space:nowrap;pointer-events:none;font-weight:600}
+.sni:hover .sni-lbl{color:rgba(255,255,255,.55);transform:translateX(0)}
+.sni.on .sni-lbl{color:var(--accent);transform:translateX(0)}
+.sni-pip{width:5px;height:5px;border-radius:50%;border:1px solid rgba(255,255,255,.2);transition:all .3s;flex-shrink:0;background:transparent}
+.sni.on .sni-pip{background:var(--accent);border-color:var(--accent);box-shadow:0 0 10px rgba(245,255,0,.7);transform:scale(1.7)}
+.sni:hover:not(.on) .sni-pip{border-color:rgba(255,255,255,.45);background:rgba(255,255,255,.08)}
+.sni-grp{display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+.sni-grp-lbl{font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0);transition:color .3s;white-space:nowrap;font-weight:600;padding-right:15px;margin-bottom:1px}
+.sni-grp-lbl.on{color:rgba(255,255,255,.35)}
+.sni.sni-sub .sni-lbl{font-size:8px;letter-spacing:.14em}
+.sni.sni-sub .sni-pip{width:4px;height:4px}
+
+/* ── COMMON INNER ────────────────────────────── */
+.si-wrap{position:relative;z-index:2;flex:1;min-height:0;width:100%;padding:56px 56px 52px 72px;display:flex;flex-direction:column}
+.si-wrap.rpad{padding-right:152px}
+.s-label{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700;display:flex;align-items:center;gap:9px}
+.s-label::before{content:'';width:18px;height:1px;background:var(--accent)}
+.s-title{font-family:var(--race);font-size:clamp(30px,4.2vw,62px);line-height:.95;letter-spacing:.02em;text-transform:uppercase}
+.s-title em{color:var(--accent);font-style:normal}
+.s-bnum{position:absolute;right:152px;bottom:-20px;font-family:var(--race);font-size:210px;color:rgba(245,255,0,.025);pointer-events:none;letter-spacing:.02em;line-height:1;z-index:1;user-select:none}
+
+/* ── BOTTOM BAR ──────────────────────────────── */
+#bottombar{position:fixed;bottom:0;left:0;right:0;z-index:1003;height:38px;background:var(--accent);display:flex;align-items:center;justify-content:space-between;padding:0 24px;box-shadow:0 -2px 16px rgba(0,0,0,.35)}
+.bb-section{display:flex;align-items:center;gap:12px}
+.bb-page{font-family:var(--race);font-size:12px;color:#000;letter-spacing:.06em;display:flex;align-items:baseline;gap:3px}
+.bb-page .bb-sep{color:rgba(0,0,0,.4);font-size:9px}
+.bb-page .bb-tot{color:rgba(0,0,0,.4);font-size:9px}
+.bb-btn{padding:4px 12px;border:1px solid rgba(0,0,0,.3);border-radius:2px;font-family:var(--race);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#000;background:transparent;cursor:pointer;transition:all .2s;text-decoration:none;display:flex;align-items:center}
+.bb-btn:hover{background:rgba(0,0,0,.15);border-color:rgba(0,0,0,.5)}
+.bb-btn:active{transform:scale(.96)}
+.bb-arrows{display:flex;gap:3px}
+.bb-arrows button{width:28px;height:26px;border:1px solid rgba(0,0,0,.3);border-radius:2px;display:flex;align-items:center;justify-content:center;cursor:pointer;background:transparent;color:#000;font-size:11px;transition:all .2s;font-family:inherit}
+.bb-arrows button:hover{background:rgba(0,0,0,.15);border-color:rgba(0,0,0,.5)}
+.bb-arrows button:active{transform:scale(.94)}
+.bb-divider{width:1px;height:18px;background:rgba(0,0,0,.25)}
+.bb-link{font-family:var(--race);font-size:8px;letter-spacing:.1em;color:#000;text-decoration:none;opacity:.7;transition:opacity .2s;text-transform:lowercase}
+.bb-link:hover{opacity:1}
+.bb-social{display:flex;gap:8px;align-items:center}
+.bb-social a{color:rgba(0,0,0,.65);display:flex;transition:color .2s}
+.bb-social a:hover{color:#000}
+.bb-social svg{width:14px;height:14px}
+
+/* ════════════════════════════════════════════════
+   SLIDE 01 — COVER
+════════════════════════════════════════════════ */
+#s01{background:var(--blk)}
+.cv-photo{position:absolute;inset:0;z-index:0;overflow:hidden;opacity:.35;filter:saturate(.5)}
+.cv-photo iframe{position:absolute;top:50%;left:50%;width:180%;height:180%;transform:translate(-50%,-50%);pointer-events:none;border:0}
+.cv-grid{position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(245,255,0,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(245,255,0,.02) 1px,transparent 1px);background-size:72px 72px;animation:cvGrid 22s linear infinite}
+@keyframes cvGrid{to{background-position:72px 72px}}
+.cv-vignette{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse at 50% 46%,transparent 22%,rgba(8,8,8,.78) 78%)}
+.cv-center{position:relative;z-index:3;height:100%;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:56px 80px;gap:0}
+.cv-logo-c{width:clamp(240px,24vw,340px);filter:drop-shadow(0 6px 40px rgba(0,0,0,.6));transform:translateX(-14px)}
+.cv-series{font-family:var(--race);font-size:clamp(9px,1vw,13px);letter-spacing:.3em;color:rgba(255,255,255,.45);margin-top:22px;text-transform:uppercase}
+.cv-rule{display:flex;align-items:center;gap:16px;margin:20px 0 18px;width:fit-content;align-self:center}
+.cv-rule-line{width:60px;height:1px;background:rgba(255,255,255,.12)}
+.cv-rule-diamond{width:5px;height:5px;background:var(--accent);transform:rotate(45deg);flex-shrink:0;box-shadow:0 0 8px rgba(245,255,0,.5)}
+.cv-year{font-family:var(--race);font-size:clamp(50px,7vw,80px);line-height:.9;letter-spacing:.02em;color:var(--accent);text-shadow:0 0 60px rgba(245,255,0,.15)}
+.cv-year-dash{color:#fff}
+.cv-spons{font-family:var(--race);font-size:clamp(14px,1.8vw,22px);letter-spacing:.22em;color:var(--wh);margin-top:10px;text-shadow:0 2px 16px rgba(0,0,0,.5)}
+.cv-stats{display:flex;align-items:stretch;gap:1px;margin-top:28px;width:fit-content;align-self:center}
+.cv-stat{padding:10px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);text-align:center;min-width:90px}
+.cv-stat-n{font-family:var(--race);font-size:clamp(13px,1.6vw,18px);color:var(--wh);letter-spacing:.03em}
+.cv-stat-l{font-size:7px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.32);margin-top:3px}
+.cv-creds{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:22px}
+.cv-cred-logo{height:110px;width:auto;opacity:.85;transition:opacity .3s}
+.cv-cred-logo:hover{opacity:1}
+.cv-website{font-family:var(--race);font-size:clamp(10px,1.2vw,14px);letter-spacing:.22em;color:rgba(255,255,255,.45);margin-top:14px;text-transform:lowercase}
+.cv-website a{color:rgba(255,255,255,.45);text-decoration:none;transition:color .3s}
+.cv-website a:hover{color:var(--accent)}
+.cv-social{display:flex;gap:14px;margin-top:18px;align-items:center}
+.cv-social a{color:rgba(255,255,255,.4);transition:color .3s;display:flex}
+.cv-social a:hover{color:var(--accent)}
+.cv-social svg{width:20px;height:20px}
+
+/* ════════════════════════════════════════════════
+   SLIDE 02 — WHY RACE WITH US
+════════════════════════════════════════════════ */
+#s02{background:var(--blk)}
+#s02 .s-bg{background-image:url('Photos/Optimized/Pack (1 of 1)-4.jpg');opacity:.15;filter:brightness(.8)}
+.s02-body{font-size:12px;line-height:1.85;color:rgba(255,255,255,.52);margin-bottom:16px}
+.s02-q{font-family:var(--race);font-size:clamp(20px,2.4vw,34px);color:var(--wh);line-height:1.05;letter-spacing:.02em;margin:14px 0 18px}
+.s02-q em{color:var(--accent);font-style:normal}
+.s02-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
+.s02-tag{padding:5px 13px;border:1px solid rgba(245,255,0,.35);border-radius:2px;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);transition:all .2s}
+.s02-tag:hover{border-color:var(--accent);color:var(--wh);background:rgba(245,255,0,.15)}
+.p-card{padding:26px 22px;background:var(--d2);transition:background .3s;position:relative;overflow:hidden}
+.p-card::before{content:'';position:absolute;top:0;left:0;width:0;height:2px;background:var(--accent);transition:width .4s}
+.p-card:hover{background:var(--d3)}
+.p-card:hover::before{width:100%}
+.p-icon{font-size:20px;margin-bottom:14px;color:var(--accent)}
+.p-icon svg{width:36px;height:36px}
+.p-num{font-family:var(--race);font-size:34px;color:var(--wh)}
+.p-lbl{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--wh);margin-top:6px;font-weight:600}
+.p-desc{font-size:10px;color:rgba(255,255,255,.38);margin-top:7px;line-height:1.5}
+
+/* ════════════════════════════════════════════════
+   SLIDE 03 — THE SERIES STORY
+════════════════════════════════════════════════ */
+#s03{background:var(--blk)}
+#s03 .si-wrap{flex-direction:row;padding:0;gap:0}
+.s03-photo{width:42%;position:relative;overflow:hidden;flex-shrink:0}
+.s03-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.55) saturate(1.2);transition:filter .6s,transform .6s}
+.slide[data-s="active"] .s03-photo img{filter:brightness(.7) saturate(1.3);transform:scale(1.04)}
+.s03-photo-ov{position:absolute;inset:0;background:linear-gradient(to right,transparent 50%,var(--blk))}
+.s03-quote-bg{position:absolute;bottom:0;left:0;right:0;top:0;display:flex;align-items:flex-end;padding:36px;z-index:2}
+.s03-founder-tag{background:rgba(8,8,8,.85);border:1px solid rgba(245,255,0,.2);padding:12px 16px;border-radius:3px;backdrop-filter:blur(10px)}
+.s03-ft-name{font-family:var(--race);font-size:16px;letter-spacing:.06em}
+.s03-ft-title{font-size:9px;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+.s03-r{width:58%;padding:52px 52px 48px 52px;padding-right:148px;display:flex;flex-direction:column;justify-content:center;gap:0;overflow:hidden}
+.s03-logo{width:clamp(180px,26vw,340px);margin:24px 0;filter:drop-shadow(0 4px 16px rgba(0,0,0,.5))}
+.s03-body{font-size:11.5px;line-height:1.85;color:rgba(255,255,255,.5);margin:10px 0 20px}
+.s03-milestones{display:flex;flex-direction:column;gap:1px;margin-bottom:22px}
+.ms-item{display:flex;align-items:flex-start;gap:14px;padding:11px 14px;background:var(--d2)}
+.ms-year{font-family:var(--race);font-size:12px;color:var(--accent);letter-spacing:.06em;flex-shrink:0;min-width:54px}
+.ms-text{font-size:10px;color:rgba(255,255,255,.55);line-height:1.5}
+.ms-text strong{color:rgba(255,255,255,.82)}
+.s03-pull{padding:16px 18px;border-left:2px solid var(--accent);background:rgba(245,255,0,.04);margin-top:4px}
+.s03-pull-q{font-size:12px;color:rgba(255,255,255,.72);line-height:1.7;font-style:italic}
+.s03-pull-attr{font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-top:7px}
+/* S03b — TRACK BUILDER */
+.s03b-tag{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.s03b-name{font-family:var(--race);font-size:clamp(22px,2.8vw,42px);letter-spacing:.03em;line-height:1.05;margin:6px 0 14px}
+.s03b-name em{color:var(--accent);font-style:normal}
+.s03b-logo{width:clamp(120px,14vw,200px);margin-bottom:14px}
+.s03b-person{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:18px}
+.s03b-bio{font-size:clamp(11px,.95vw,13.5px);color:rgba(255,255,255,.6);line-height:1.8;max-width:520px}
+
+/* ════════════════════════════════════════════════
+   SLIDE 04 — AT THE EVENT
+════════════════════════════════════════════════ */
+#s04{background:var(--blk)}
+#s04 .si-wrap{padding:0;gap:0}
+.s04-hd{padding:40px 72px 22px;padding-right:152px;flex-shrink:0;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;position:relative;z-index:3}
+.s04-hd-stats{display:flex;gap:24px}
+.s04-hs{text-align:right}
+.s04-hs-n{font-family:var(--race);font-size:22px;color:var(--wh)}
+.s04-hs-l{font-size:7px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:2px}
+.s04-panels{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;flex:1;min-height:0}
+.s04p{position:relative;overflow:hidden}
+.s04p img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.4) saturate(1.2);transition:filter .5s,transform .5s}
+.s04p:hover img{filter:brightness(.55) saturate(1.4);transform:scale(1.05)}
+.s04p-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.94) 0%,rgba(8,8,8,.3) 50%,transparent 100%)}
+.s04p-content{position:absolute;bottom:0;left:0;right:0;padding:24px 22px}
+.s04p-day{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:7px}
+.s04p-title{font-family:var(--race);font-size:clamp(16px,1.8vw,22px);letter-spacing:.04em;line-height:1.1;margin-bottom:10px}
+.s04p-list{list-style:none;display:flex;flex-direction:column;gap:4px}
+.s04p-list li{font-size:10px;color:rgba(255,255,255,.55);display:flex;align-items:flex-start;gap:6px;line-height:1.4}
+.s04p-list li::before{content:'—';color:rgba(245,255,0,.6);flex-shrink:0}
+.s04p-badge{display:inline-flex;margin-top:10px;padding:4px 10px;background:rgba(245,255,0,.15);border:1px solid rgba(245,255,0,.25);border-radius:2px;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.s04-pricing{display:flex;flex-shrink:0;background:rgba(255,255,255,.03);border-top:1px solid rgba(255,255,255,.07)}
+.s04-pr-item{flex:1;padding:11px 22px;display:flex;align-items:center;justify-content:center;text-align:center;gap:12px;border-right:1px solid rgba(255,255,255,.07)}
+.s04-pr-item:last-child{border-right:none}
+.s04-pr-n{font-family:var(--race);font-size:22px;color:var(--accent)}
+.s04-pr-l{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);line-height:1.3}
+
+/* ════════════════════════════════════════════════
+   SLIDE 05 — PRO PURSE & CHAMPIONSHIP BONUS
+════════════════════════════════════════════════ */
+#s05{background:var(--d1)}
+#s05 .s-bg{background-image:url('Photos/Optimized/83 battle (1 of 1).jpg');opacity:.07}
+.purse-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:14px;flex:1;min-height:0}
+.purse-panel{background:var(--d2);padding:28px 24px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.purse-panel:hover{background:var(--d3)}
+.purse-panel-title{font-family:var(--race);font-size:18px;letter-spacing:.04em;color:var(--wh);margin-bottom:14px}
+.purse-panel-title em{color:var(--accent);font-style:normal}
+.purse-table{width:100%;border-collapse:collapse}
+.purse-table th{text-align:left;padding:6px 8px;font-size:7px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.28);border-bottom:1px solid rgba(255,255,255,.06)}
+.purse-table td{padding:5px 8px;border-bottom:1px solid rgba(255,255,255,.04);font-size:11px;color:rgba(255,255,255,.62)}
+.purse-table td:last-child{color:var(--accent);font-family:var(--race);font-size:13px}
+.purse-total{margin-top:12px;padding:10px 12px;background:rgba(245,255,0,.06);border:1px solid rgba(245,255,0,.15);border-radius:2px;display:flex;justify-content:space-between;align-items:center}
+.purse-total-lbl{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.purse-total-n{font-family:var(--race);font-size:20px;color:var(--accent)}
+.prog-bonus{background:linear-gradient(160deg,rgba(245,255,0,.08),rgba(245,255,0,.02));border:1px solid rgba(245,255,0,.2);padding:28px 24px;grid-column:1/-1;display:flex;flex-direction:column}
+.prog-bonus-h{font-family:var(--race);font-size:22px;color:var(--accent);margin-bottom:6px}
+.prog-bonus-desc{font-size:11px;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:12px}
+.prog-table{width:100%;border-collapse:collapse}
+.prog-table th{text-align:center;padding:5px 6px;font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);border-bottom:1px solid rgba(255,255,255,.06)}
+.prog-table td{text-align:center;padding:4px 6px;font-size:10px;color:rgba(255,255,255,.5);border-bottom:1px solid rgba(255,255,255,.03)}
+.prog-table td:first-child{color:var(--accent);font-family:var(--race);font-size:12px;text-align:left}
+.prog-table tr:last-child td{color:var(--accent);font-weight:700}
+
+/* ════════════════════════════════════════════════
+   SLIDE 06 — BROADCAST / TV EXPOSURE
+════════════════════════════════════════════════ */
+#s06{background:var(--blk)}
+#s06 .si-wrap{flex-direction:row;padding:0;gap:0}
+.s06-photo{width:50%;position:relative;overflow:hidden;flex-shrink:0}
+.s06-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.65) saturate(1.3);transition:filter .6s,transform .6s}
+.slide[data-s="active"] .s06-photo img{filter:brightness(.8) saturate(1.4);transform:scale(1.04)}
+.s06-photo-ov{position:absolute;inset:0;background:linear-gradient(to right,transparent 55%,var(--blk))}
+.s06-badge{position:absolute;bottom:36px;left:36px;background:rgba(8,8,8,.88);border:1px solid rgba(245,255,0,.22);padding:13px 18px;border-radius:3px;backdrop-filter:blur(10px)}
+.s06-fs-logos{display:flex;gap:10px;margin-top:8px}
+.s06-fs-logo{font-family:var(--race);font-size:13px;letter-spacing:.06em;padding:5px 12px;background:rgba(245,255,0,.1);border:1px solid rgba(245,255,0,.3);border-radius:2px;color:var(--accent)}
+.s06-bt{font-family:var(--race);font-size:17px;letter-spacing:.06em}
+.s06-bs{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-top:3px}
+.s06-r{width:50%;padding:60px 52px 52px 52px;padding-right:150px;display:flex;flex-direction:column;justify-content:center}
+.s06-body{font-size:12px;line-height:1.8;color:rgba(255,255,255,.5);margin:12px 0 22px}
+.s06-metrics{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.mc{background:var(--d2);padding:20px 18px;border:1px solid rgba(255,255,255,.04);transition:border-color .3s,background .3s}
+.mc:hover{border-color:rgba(245,255,0,.22);background:var(--d3)}
+.mc-n{font-family:var(--race);font-size:clamp(22px,2.4vw,36px);color:var(--wh)}
+.mc-l{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--gr);margin-top:5px}
+.mc-s{font-size:10px;color:rgba(255,255,255,.28);margin-top:3px}
+
+/* ════════════════════════════════════════════════
+   SLIDE 07 — RACE CLASSES
+════════════════════════════════════════════════ */
+.classes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:14px;flex:1;min-height:0}
+.cls-card{background:var(--d2);padding:14px 16px;position:relative;overflow:hidden;transition:background .3s}
+.cls-card::before{content:'';position:absolute;top:0;left:0;width:0;height:2px;background:var(--accent);transition:width .4s}
+.cls-card:hover{background:var(--d3)}
+.cls-card:hover::before{width:100%}
+.cls-card.cls-pro{background:linear-gradient(160deg,rgba(245,255,0,.1),rgba(245,255,0,.03));border:1px solid rgba(245,255,0,.2)}
+.cls-card-cat{font-size:7px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
+.cls-card-name{font-family:var(--race);font-size:14px;letter-spacing:.03em;margin-bottom:4px}
+.cls-card-desc{font-size:9px;color:rgba(255,255,255,.4);line-height:1.5}
+.cls-card-badge{display:inline-flex;margin-top:6px;padding:3px 8px;background:rgba(245,255,0,.1);border:1px solid rgba(245,255,0,.2);border-radius:2px;font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);width:fit-content}
+.cls-strip{display:flex;flex-shrink:0;background:rgba(255,255,255,.03);border-top:1px solid rgba(255,255,255,.07);margin-top:14px}
+.cls-strip-item{flex:1;padding:10px 16px;display:flex;align-items:center;gap:10px;border-right:1px solid rgba(255,255,255,.06)}
+.cls-strip-item:last-child{border-right:none}
+.cls-strip-n{font-family:var(--race);font-size:20px;color:var(--accent)}
+.cls-strip-l{font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);line-height:1.3}
+
+/* ════════════════════════════════════════════════
+   SLIDE 08 — SCHEDULE
+════════════════════════════════════════════════ */
+#s08{background:var(--blk)}
+.sched{width:100%;border-collapse:collapse;margin-top:14px;flex:1}
+.sched th{text-align:left;padding:9px 14px;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);border-bottom:1px solid rgba(255,255,255,.06);font-weight:500}
+.sched td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px;color:rgba(255,255,255,.68);vertical-align:middle}
+.sched tbody tr{transition:background .2s}
+.sched tbody tr:hover{background:rgba(245,255,0,.04)}
+.rd{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:21px;padding:0 7px;background:rgba(245,255,0,.1);border:1px solid rgba(245,255,0,.2);border-radius:2px;font-size:9px;font-weight:700;color:var(--accent);letter-spacing:.06em}
+.vn{color:var(--wh);font-weight:500}
+.stb{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:100px;font-size:8px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.st-done{background:rgba(255,255,255,.05);color:rgba(255,255,255,.3)}
+.st-finale{background:rgba(245,255,0,.12);color:var(--accent);border:1px solid rgba(245,255,0,.18)}
+.st-dot{width:4px;height:4px;border-radius:50%}
+.st-done .st-dot{background:rgba(255,255,255,.25)}
+.st-finale .st-dot{background:var(--accent)}
+.sched-note{margin-top:12px;font-size:10px;color:rgba(255,255,255,.3);line-height:1.6;flex-shrink:0}
+
+/* ════════════════════════════════════════════════
+   SLIDE 09 — TEAM/RACER INCENTIVES
+════════════════════════════════════════════════ */
+#s09{background:var(--d1)}
+#s09::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(245,255,0,.03),transparent 65%);z-index:1}
+#s09 .si-wrap{position:relative;z-index:2}
+.incentive-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:14px;flex:1;min-height:0}
+.inc-card{background:var(--d2);padding:24px 20px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:8px;transition:background .3s,transform .3s}
+.inc-card:hover{background:var(--d3);transform:translateY(-3px)}
+.inc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent)}
+.inc-icon{color:var(--accent);margin-bottom:4px}
+.inc-icon svg{width:28px;height:28px}
+.inc-name{font-family:var(--race);font-size:16px;letter-spacing:.04em}
+.inc-desc{font-size:10px;color:rgba(255,255,255,.5);line-height:1.6}
+.inc-highlight{font-family:var(--race);font-size:18px;color:var(--accent);margin-top:auto}
+.inc-card.inc-featured{background:linear-gradient(160deg,rgba(245,255,0,.1),rgba(245,255,0,.03));border:1px solid rgba(245,255,0,.2)}
+
+/* ════════════════════════════════════════════════
+   SLIDE 10 — CONTINGENCY & REGISTRATION
+════════════════════════════════════════════════ */
+#s10{background:var(--blk)}
+.reg-wrap{display:flex;gap:3px;flex:1;min-height:0;margin-top:14px}
+.reg-left{width:42%;display:flex;flex-direction:column;gap:3px}
+.reg-right{flex:1;display:flex;flex-direction:column;gap:3px}
+.reg-block{padding:20px 18px;background:var(--d2);display:flex;flex-direction:column;gap:8px;border-left:2px solid var(--accent)}
+.reg-block-title{font-family:var(--race);font-size:15px;letter-spacing:.04em}
+.reg-block-desc{font-size:10px;color:rgba(255,255,255,.5);line-height:1.6}
+.reg-block a{color:var(--accent);text-decoration:none;font-weight:600;transition:color .2s}
+.reg-block a:hover{color:#fff}
+.reg-cta-btn{display:inline-flex;margin-top:4px;padding:8px 18px;background:var(--accent);color:#000;border:none;border-radius:2px;font-family:var(--race);font-size:10px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:all .2s;width:fit-content;font-weight:700;cursor:pointer}
+.reg-cta-btn:hover{background:#fff;color:#000;transform:translateY(-2px);box-shadow:0 8px 20px rgba(245,255,0,.3)}
+.oem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.oem-card{padding:12px 14px;background:var(--d2);text-align:center;transition:background .3s}
+.oem-card:hover{background:var(--d3)}
+.oem-name{font-family:var(--race);font-size:14px;letter-spacing:.04em;color:var(--wh)}
+.oem-url{font-size:8px;color:rgba(255,255,255,.3);margin-top:3px;word-break:break-all}
+.reg-fees{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.fee-item{padding:12px 14px;background:var(--d2);display:flex;flex-direction:column;gap:2px}
+.fee-label{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+.fee-amount{font-family:var(--race);font-size:18px;color:var(--accent)}
+.fee-note{font-size:8px;color:rgba(255,255,255,.3)}
+.s11-mob-bg{display:none}
+
+/* ════════════════════════════════════════════════
+   SLIDE 12 — CTA / CONTACT
+════════════════════════════════════════════════ */
+#s11 .s-bg{background-image:url('Photos/Optimized/351 pack air (1 of 1).jpg');background-position:center 40%;filter:brightness(.22) saturate(1.4)}
+#s11 .s-ov{background:radial-gradient(ellipse at 50% 55%,rgba(245,255,0,.08),rgba(8,8,8,.65) 70%)}
+#s11 .si-wrap{align-items:center;justify-content:center;text-align:center;padding-right:150px}
+.cta-eye{font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
+.cta-h{font-family:var(--race);font-size:clamp(32px,5vw,60px);line-height:.9;letter-spacing:.02em;text-transform:uppercase;margin-bottom:12px}
+.cta-h em{color:var(--accent);font-style:normal}
+.cta-body{font-size:13px;color:rgba(255,255,255,.48);max-width:520px;margin:0 auto 16px;line-height:1.6}
+.cta-links{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:600px;margin:0 auto 22px;width:100%}
+.cta-link-card{padding:14px 16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:3px;text-decoration:none;color:#fff;transition:all .3s;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.cta-link-card:hover{border-color:var(--accent);background:rgba(245,255,0,.06);transform:translateY(-3px)}
+.cta-link-card svg{width:22px;height:22px;color:var(--accent)}
+.cta-link-title{font-family:var(--race);font-size:11px;letter-spacing:.06em}
+.cta-link-sub{font-size:8px;color:rgba(255,255,255,.35);letter-spacing:.08em;text-transform:uppercase}
+.cta-btns{display:flex;gap:10px;justify-content:center;margin-bottom:16px}
+.btn-y{background:var(--accent);color:#000;padding:14px 32px;border:none;border-radius:2px;font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-weight:700;cursor:none;text-decoration:none;transition:background .2s,transform .15s,box-shadow .2s}
+.btn-y:hover{background:#fff;transform:translateY(-2px);box-shadow:0 12px 28px rgba(245,255,0,.3)}
+.btn-o{background:transparent;color:rgba(255,255,255,.62);padding:14px 32px;border:1px solid rgba(255,255,255,.14);border-radius:2px;font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-weight:600;cursor:none;text-decoration:none;transition:all .2s}
+.btn-o:hover{border-color:rgba(255,255,255,.38);color:#fff;transform:translateY(-2px)}
+.cta-contact{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;padding-top:16px;border-top:1px solid rgba(255,255,255,.06)}
+.cci{text-align:center}
+.cci-l{font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:4px}
+.cci-v{font-size:12px;color:rgba(255,255,255,.62)}
+.cci-v a{color:inherit;text-decoration:none;transition:color .2s}
+.cci-v a:hover{color:var(--accent)}
+
+/* ════════════════════════════════════════════════
+   MOBILE NAV BAR
+════════════════════════════════════════════════ */
+#mob-bar{display:none;position:fixed;bottom:0;left:0;right:0;height:calc(50px + env(safe-area-inset-bottom, 0px));background:var(--accent);z-index:1003;align-items:center;justify-content:space-between;padding:0 14px env(safe-area-inset-bottom, 0px);box-shadow:0 -2px 20px rgba(0,0,0,.5)}
+.mb-btn{width:40px;height:38px;border:1px solid rgba(0,0,0,.28);border-radius:2px;background:transparent;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .18s;-webkit-tap-highlight-color:transparent}
+.mb-btn:active{background:rgba(0,0,0,.22)}
+.mb-center{display:flex;flex-direction:column;align-items:center;gap:1px;flex:1;padding:0 8px}
+#mb-page{font-family:var(--race);font-size:15px;color:#000;letter-spacing:.06em;line-height:1}
+#mb-title{font-size:7px;letter-spacing:.18em;text-transform:uppercase;color:rgba(0,0,0,.6);white-space:nowrap;overflow:hidden;max-width:200px;text-overflow:ellipsis}
+.mb-nav-group{display:flex;gap:4px;flex-shrink:0}
+
+/* helpers */
+.cv-rule-2{display:none}
+.mob-swipe-x{display:none;align-items:center;justify-content:center;gap:5px;flex-shrink:0}
+.mob-swipe-x span{font-size:7px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.22)}
+.mob-swipe-x svg{color:rgba(255,255,255,.22)}
+
+/* ════════════════════════════════════════════════
+   SWIPE HINT
+════════════════════════════════════════════════ */
+#swipe-hint{display:none;position:absolute;bottom:62px;left:50%;transform:translateX(-50%);flex-direction:column;align-items:center;gap:5px;pointer-events:none}
+#swipe-hint svg{color:rgba(255,255,255,.5);animation:hintChevron 2s ease-in-out 2.5s 4 forwards}
+#swipe-hint span{font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.38);animation:hintFade 2s ease-in-out 2.5s 4 forwards}
+@keyframes hintChevron{0%,100%{opacity:0;transform:translateY(4px)}40%{opacity:.9;transform:translateY(-4px)}80%{opacity:.6}}
+@keyframes hintFade{0%,100%{opacity:0}40%,60%{opacity:1}}
+
+/* ════════════════════════════════════════════════
+   MOBILE ≤ 900px
+════════════════════════════════════════════════ */
+@media(max-width:900px){
+  body{cursor:auto}
+  #cur,#cur-ring{display:none}
+  a,button,.btn-y,.btn-o{cursor:pointer}
+  #snav,#bottombar,#frame-top,#frame-left,#frame-right{display:none}
+  :root{--frame:0px}
+  #mob-bar{display:flex}
+  #swipe-hint{display:flex}
+  #g-logo{width:48px;left:12px;top:12px}
+  #slides{top:0;left:0;right:0;bottom:calc(50px + env(safe-area-inset-bottom, 0px))}
+  .slide{overflow:hidden}
+  .si-wrap{
+    position:relative;z-index:2;
+    display:flex!important;flex-direction:column!important;
+    padding:28px 18px 20px!important;
+    gap:0!important;overflow:hidden!important;
+    justify-content:flex-start!important;text-align:left!important;
+  }
+  .si-wrap.rpad{padding-right:18px!important}
+  .s-label{justify-content:flex-start!important;margin-bottom:6px;flex-shrink:0}
+  .s-title{font-size:clamp(20px,5.5vw,34px)!important;flex-shrink:0}
+  .s-bnum{display:none!important}
+  div[style*="width:42%"],div[style*="width:58%"],
+  div[style*="width:50%"]{width:100%!important}
+
+  /* S01 COVER */
+  .cv-center{padding:24px 20px!important;gap:0!important;justify-content:center!important;align-items:center!important;overflow:hidden!important}
+  .cv-logo-c{width:clamp(160px,52vw,240px)!important;margin-bottom:10px;transform:translateX(-10px)}
+  .cv-rule-2{display:flex!important}
+  .cv-rule{margin:8px 0!important}
+  .cv-rule-line{width:40px}
+  .cv-year{font-size:clamp(36px,10vw,54px)!important;line-height:.9!important}
+  .cv-spons{font-size:clamp(8px,2.4vw,12px)!important;letter-spacing:.15em!important;margin-top:6px!important}
+  .cv-creds{flex-direction:row!important;gap:18px!important;flex-wrap:nowrap!important;justify-content:center!important;margin-top:12px!important}
+  .cv-cred-logo{height:40px!important;width:auto!important}
+  .cv-website{font-size:9px!important;margin-top:8px!important}
+  .cv-social{gap:12px!important;margin-top:8px!important}
+  .cv-social svg{width:16px;height:16px}
+  .cv-stats{display:grid!important;grid-template-columns:1fr 1fr!important;gap:5px!important;width:100%!important;max-width:290px!important;align-self:center!important;margin-top:10px!important}
+  .cv-stat{min-width:unset!important;padding:8px 10px!important}
+  .cv-stat-n{font-size:clamp(10px,3vw,14px)!important}
+  .cv-stat-l{font-size:6px!important}
+  .cv-photo iframe{width:300%;height:300%}
+
+  /* S02 WHY RACE */
+  #s02 .si-wrap{gap:0!important;padding-top:16px!important}
+  #s02 .si-wrap > div:first-of-type{width:100%!important;flex-direction:column!important;justify-content:flex-start!important;flex-shrink:0}
+  .s02-q{font-size:clamp(15px,4.5vw,22px)!important;margin:4px 0 6px!important;line-height:1.1!important}
+  .s02-body{font-size:9.5px!important;line-height:1.55!important;margin-bottom:5px!important}
+  .s02-tags{gap:4px!important;margin-top:4px!important;margin-bottom:8px!important}
+  .s02-tag{font-size:7px!important;padding:3px 9px!important}
+  #s02 .si-wrap > div:last-of-type{width:100%!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:2px!important;flex:1;min-height:0}
+  .p-card{padding:8px 12px!important;text-align:left!important;display:flex;flex-direction:column;justify-content:center}
+  .p-icon{margin:0 0 6px!important}
+  .p-icon svg{width:22px;height:22px}
+  .p-num{font-size:clamp(18px,5vw,26px)!important}
+  .p-lbl{font-size:11px!important;margin-top:2px!important}
+  .p-desc{font-size:8.5px!important;margin-top:3px!important;line-height:1.4!important}
+
+  /* S03 STORY */
+  #s03 .si-wrap{flex-direction:column!important;padding:28px 18px 18px!important}
+  #s03 .s03-photo{display:block!important;position:absolute!important;inset:0!important;width:100%!important;flex:none!important;z-index:0!important}
+  #s03 .s03-photo img{filter:brightness(.28) saturate(.5)!important;object-position:center 90%!important}
+  #s03 .s03-photo-ov{background:linear-gradient(to bottom,var(--blk) 35%,rgba(8,8,8,.15) 80%,rgba(8,8,8,.55) 100%)!important}
+  #s03 .s03-quote-bg{display:none!important}
+  #s03 .s03-r{position:relative!important;z-index:2!important}
+  .s03-r{width:100%!important;padding:0!important;padding-right:0!important;display:flex;flex-direction:column;flex:1;min-height:0;gap:0;justify-content:flex-start;overflow:hidden}
+  .s03-logo{width:clamp(100px,30vw,150px)!important;margin:6px 0 8px!important;align-self:flex-start!important}
+  .s03-body{font-size:9.5px!important;line-height:1.55!important;margin:0 0 8px!important}
+  .s03-milestones{gap:0!important;margin-bottom:6px!important;flex-shrink:0}
+  .ms-item{padding:7px 12px!important;gap:10px!important}
+  .ms-year{font-size:10px!important;min-width:42px!important}
+  .ms-text{font-size:9px!important;line-height:1.4!important}
+  .s03-pull{padding:9px 13px!important;margin-top:4px!important;flex-shrink:0}
+  .s03-pull-q{font-size:9.5px!important;line-height:1.55!important}
+  .s03-pull-attr{font-size:7px!important;margin-top:4px!important}
+
+  /* S03b mobile */
+  #s03b .si-wrap{flex-direction:column!important;padding:28px 18px 18px!important}
+  #s03b .s03-photo{display:block!important;position:absolute!important;inset:0!important;width:100%!important;flex:none!important;z-index:0!important}
+  #s03b .s03-photo img{filter:brightness(.28) saturate(.5)!important;object-position:center 85%!important}
+  #s03b .s03-photo-ov{background:linear-gradient(to bottom,var(--blk) 35%,rgba(8,8,8,.15) 80%,rgba(8,8,8,.55) 100%)!important}
+  #s03b .s03-quote-bg{display:none!important}
+  #s03b .s03-r{position:relative!important;z-index:2!important}
+  .s03b-logo{width:clamp(80px,28vw,130px)!important;margin-bottom:8px!important}
+  .s03b-name{font-size:clamp(18px,5vw,28px)!important;margin:4px 0 8px!important}
+  .s03b-person{font-size:8px!important;margin-bottom:10px!important}
+  .s03b-bio{font-size:8.5px!important;line-height:1.55!important}
+
+  /* S04 EVENT */
+  #s04 .si-wrap{padding:0!important;flex-direction:column!important}
+  .s04-hd{padding:18px 18px 12px!important;flex-shrink:0;display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;flex-wrap:nowrap!important;gap:8px!important}
+  .s04-hd .s-label{margin-bottom:2px;font-size:8px}
+  .s04-hd .s-title{font-size:clamp(16px,4.5vw,22px)!important;margin-top:3px!important}
+  .s04-hd-stats{display:grid!important;grid-template-columns:1fr 1fr!important;gap:3px 12px!important;flex-shrink:0;flex-direction:unset!important;align-items:start!important}
+  .s04-hs{text-align:right!important}
+  .s04-hs-n{font-size:15px!important}
+  .s04-hs-l{font-size:6px!important}
+  .s04-panels{display:flex!important;flex-direction:row!important;overflow-x:auto!important;scroll-snap-type:x mandatory!important;-webkit-overflow-scrolling:touch;flex:1;min-height:0;gap:0!important;scrollbar-width:none!important}
+  .s04-panels::-webkit-scrollbar{display:none}
+  .s04p{flex:0 0 88vw!important;scroll-snap-align:start!important;height:100%!important}
+  .s04p-content{padding:14px 16px!important}
+  .s04p-day{font-size:7px!important;margin-bottom:4px!important}
+  .s04p-title{font-size:clamp(14px,4vw,18px)!important;margin-bottom:6px!important}
+  .s04p-list li{font-size:9px!important;gap:5px!important}
+  .s04p-badge{font-size:7px!important;padding:3px 8px!important}
+  #s04 .mob-swipe-x{display:flex!important}
+  .s04-pricing{overflow-x:unset!important;scrollbar-width:unset!important;flex-shrink:0;flex-wrap:wrap!important}
+  .s04-pr-item{padding:6px 12px!important;gap:5px!important;text-align:center!important;justify-content:center!important}
+  .s04-pr-n{font-size:13px!important}
+  .s04-pr-l{font-size:7px!important}
+
+  /* S05 PURSE */
+  #s05 .si-wrap{gap:0!important}
+  .purse-grid{grid-template-columns:1fr!important;gap:2px!important;margin-top:8px!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch}
+  .purse-panel{padding:14px 14px!important}
+  .purse-panel-title{font-size:14px!important;margin-bottom:8px!important}
+  .purse-table td{padding:4px 6px!important;font-size:10px!important}
+  .purse-table td:last-child{font-size:11px!important}
+  .purse-total{padding:8px 10px!important;margin-top:8px!important}
+  .purse-total-n{font-size:16px!important}
+  .prog-bonus{padding:14px 14px!important}
+  .prog-bonus-h{font-size:16px!important}
+  .prog-bonus-desc{font-size:9px!important;margin-bottom:6px!important}
+  .prog-table td,.prog-table th{padding:3px 4px!important;font-size:8px!important}
+
+  /* S06 BROADCAST */
+  #s06 .si-wrap{flex-direction:column!important;padding:28px 18px 18px!important;position:relative!important}
+  .s06-photo{display:block!important;position:absolute!important;inset:0!important;width:100%!important;flex:none!important;z-index:0!important}
+  .s06-photo img{filter:brightness(.2) saturate(.4)!important;object-position:center 75%!important}
+  .s06-photo .s06-photo-ov{background:linear-gradient(to bottom,var(--blk) 30%,rgba(8,8,8,.15) 75%,rgba(8,8,8,.5) 100%)!important}
+  .s06-badge{display:none!important}
+  .s06-r{width:100%!important;padding:0!important;padding-right:0!important;display:flex;flex-direction:column;flex:1;min-height:0;justify-content:flex-start;position:relative!important;z-index:2!important}
+  .s06-body{font-size:9.5px!important;line-height:1.55!important;margin:6px 0 10px!important}
+  .s06-metrics{display:grid!important;grid-template-columns:1fr 1fr!important;gap:2px!important;flex:1;min-height:0;align-content:start}
+  .mc{padding:12px 12px!important;text-align:left!important}
+  .mc-n{font-size:clamp(18px,5vw,26px)!important}
+  .mc-l{font-size:7px!important;margin-top:3px!important}
+  .mc-s{font-size:8.5px!important}
+
+  /* S07 CLASSES */
+  .classes-grid{grid-template-columns:1fr 1fr!important;gap:2px!important;margin-top:6px!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch}
+  .cls-card{padding:10px 12px!important}
+  .cls-card-cat{font-size:6px!important;margin-bottom:3px!important}
+  .cls-card-name{font-size:12px!important}
+  .cls-card-desc{font-size:8px!important}
+  .cls-card-badge{font-size:6px!important;padding:2px 6px!important;margin-top:4px!important}
+  .cls-strip{flex-wrap:wrap!important;margin-top:8px!important}
+  .cls-strip-item{padding:8px 10px!important;flex:1 1 33%!important;min-width:80px!important}
+  .cls-strip-n{font-size:16px!important}
+  .cls-strip-l{font-size:7px!important}
+
+  /* S08 SCHEDULE */
+  #s08 .si-wrap{gap:0!important}
+  .sched{font-size:10px!important;margin-top:6px!important;flex:1;min-height:0}
+  .sched th{padding:6px 8px!important;font-size:7px!important}
+  .sched td{padding:6px 8px!important;font-size:9.5px!important}
+  .sched th:nth-child(4),.sched td:nth-child(4){display:none!important}
+  .rd{min-width:26px!important;height:17px!important;font-size:8px!important;padding:0 5px!important}
+  .vn{font-size:9.5px!important}
+  .stb{font-size:7px!important;padding:2px 6px!important}
+  .sched-note{font-size:8px!important;margin-top:8px!important;line-height:1.5!important;flex-shrink:0}
+
+  /* S09 INCENTIVES */
+  #s09 .si-wrap{gap:0!important}
+  .incentive-grid{grid-template-columns:1fr 1fr!important;gap:2px!important;margin-top:8px!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch}
+  .inc-card{padding:12px 14px!important;gap:4px!important}
+  .inc-icon svg{width:20px!important;height:20px!important}
+  .inc-name{font-size:12px!important}
+  .inc-desc{font-size:8.5px!important}
+  .inc-highlight{font-size:14px!important}
+
+  /* S10 REGISTRATION */
+  .s11-mob-bg{display:block!important;position:absolute!important;inset:0!important;z-index:0!important;overflow:hidden}
+  .s11-mob-bg img{width:100%;height:100%;object-fit:cover;object-position:center center;filter:brightness(.22) saturate(.4)}
+  .s11-mob-bg-ov{position:absolute;inset:0;background:linear-gradient(to bottom,var(--blk) 25%,rgba(8,8,8,.1) 70%,rgba(8,8,8,.5) 100%)}
+  #s10 .si-wrap{gap:0!important;position:relative!important;z-index:2!important}
+  .reg-wrap{flex-direction:column!important;gap:3px!important;margin-top:6px!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch}
+  .reg-left{width:100%!important}
+  .reg-right{width:100%!important}
+  .reg-block{padding:10px 14px!important;gap:5px!important}
+  .reg-block-title{font-size:12px!important}
+  .reg-block-desc{font-size:9px!important}
+  .oem-grid{grid-template-columns:repeat(3,1fr)!important;gap:2px!important}
+  .oem-card{padding:8px 10px!important}
+  .oem-name{font-size:11px!important}
+  .oem-url{font-size:7px!important}
+  .reg-fees{grid-template-columns:1fr 1fr!important;gap:2px!important}
+  .fee-item{padding:8px 10px!important}
+  .fee-amount{font-size:14px!important}
+
+  /* S11 CTA */
+  #s11 .si-wrap{overflow-y:auto!important;overflow-x:hidden!important;padding:26px 18px calc(80px + env(safe-area-inset-bottom, 0px))!important;-webkit-overflow-scrolling:touch;scrollbar-width:none;text-align:center!important;align-items:center!important}
+  #s11 .si-wrap::-webkit-scrollbar{display:none}
+  #s11 img[style*="width:240px"]{width:clamp(60px,18vw,90px)!important;margin-bottom:6px!important}
+  .cta-eye{font-size:7px!important;margin-bottom:6px!important}
+  .cta-h{font-size:clamp(22px,6.5vw,38px)!important;margin-bottom:8px!important}
+  .cta-body{font-size:10px!important;margin-bottom:10px!important}
+  .cta-links{grid-template-columns:1fr 1fr 1fr!important;gap:4px!important;max-width:100%!important;margin-bottom:14px!important}
+  .cta-link-card{padding:10px 8px!important}
+  .cta-link-card svg{width:16px!important;height:16px!important}
+  .cta-link-title{font-size:9px!important}
+  .cta-link-sub{font-size:6px!important}
+  .cta-contact{gap:12px!important;padding-top:12px!important;flex-wrap:wrap!important;justify-content:center!important}
+  .cci{text-align:center!important}
+  .cci-l{font-size:7px!important}
+  .cci-v{font-size:10px!important}
+}
+
+@media(max-width:390px){
+  .cv-stats{max-width:260px!important}
+  .cv-cred-logo{height:34px!important}
+  .cta-links{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+
+<!-- FRAME BORDERS -->
+<div id="frame-top"></div>
+<div id="frame-left"></div>
+<div id="frame-right"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <img src="Partzilla Logo lite.png" alt="Partzilla Arenacross" class="ld-img">
+  <div class="ld-bar-wrap"><div class="ld-bar"></div></div>
+</div>
+
+<!-- CURSOR -->
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<!-- FLASH TRANSITION LINE -->
+<div id="flash"></div>
+
+<!-- GLOBAL BRAND MARK -->
+<div id="g-logo"><img src="Partzilla Logo lite.png" alt="Partzilla Arenacross"></div>
+
+<div id="slides">
+
+  <!-- S01 — COVER -->
+  <div class="slide" id="s01" data-s="active">
+    <div class="cv-photo"><iframe src="https://www.youtube.com/embed/KNA_izmZXcw?autoplay=1&mute=1&loop=1&playlist=KNA_izmZXcw&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+    <div class="cv-grid"></div>
+    <div class="cv-vignette"></div>
+    <div class="cv-center">
+      <img src="Partzilla Logo lite.png" alt="Partzilla Arenacross" class="cv-logo-c si" style="--d:.3s">
+      <div class="cv-rule si" style="--d:.46s">
+        <div class="cv-rule-line"></div>
+        <div class="cv-rule-diamond"></div>
+        <div class="cv-rule-line"></div>
+      </div>
+      <div class="cv-year si" style="--d:.52s">26<span class="cv-year-dash">–</span>27</div>
+      <div class="cv-spons si" style="--d:.62s">RIDER &amp; TEAM GUIDE</div>
+      <div class="cv-rule cv-rule-2 si" style="--d:.65s"><div class="cv-rule-line"></div><div class="cv-rule-diamond"></div><div class="cv-rule-line"></div></div>
+      <div class="cv-creds si" style="--d:.72s">
+        <img src="Tristar MX Logo.png" alt="TriStar MX" class="cv-cred-logo" style="height:70px">
+        <img src="AMA-Logo.png" alt="AMA" class="cv-cred-logo" style="height:70px">
+      </div>
+      <div class="cv-stats si" style="--d:.78s">
+        <div class="cv-stat"><div class="cv-stat-n">18</div><div class="cv-stat-l">Rounds</div></div>
+        <div class="cv-stat"><div class="cv-stat-n">9</div><div class="cv-stat-l">Venues</div></div>
+        <div class="cv-stat"><div class="cv-stat-n">34</div><div class="cv-stat-l">Classes</div></div>
+        <div class="cv-stat"><div class="cv-stat-n">FS1/FS2</div><div class="cv-stat-l">National TV</div></div>
+      </div>
+      <div class="cv-website si" style="--d:.84s"><a href="https://partzillaarenacross.com" target="_blank">partzillaarenacross.com</a></div>
+      <div class="cv-social si" style="--d:.88s">
+        <a href="https://www.instagram.com/partzillaarenacross/" target="_blank" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C16.67.014 16.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="https://www.facebook.com/partzillaarenacross" target="_blank" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      </div>
+      <div id="swipe-hint">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+        <span>Swipe Up</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- S02 — WHY RACE WITH US -->
+  <div class="slide" id="s02" data-s="below">
+    <div class="s-bg"></div>
+    <div class="s-bnum">02</div>
+    <div class="si-wrap rpad" style="flex-direction:row;gap:56px;align-items:center;padding-bottom:80px">
+      <div style="width:42%;display:flex;flex-direction:column;justify-content:center">
+        <div class="s-label si" style="--d:.3s">Why Race With Us</div>
+        <div class="s02-q si" style="--d:.42s">The East Coast's <em>Premier</em> Arenacross Championship</div>
+        <p class="s02-body si" style="--d:.52s">The AMA Partzilla Arenacross Series delivers bar-to-bar pro racing live on FS1 and rebroadcast on FS2, packed arenas, 400+ amateur entries per weekend, and the industry's first progressive championship bonus. Racers from 15+ states compete for official AMA #1 plates.</p>
+        <p class="s02-body si" style="--d:.60s">From 50cc minis to Open Pro — this series is built for racers, by racers. Professional pit setups, bike transport options, merch revenue opportunities, and the deepest pro field in Arenacross.</p>
+        <div class="s02-tags si" style="--d:.68s">
+          <span class="s02-tag">AMA #1 Plates</span>
+          <span class="s02-tag">FS1 &amp; FS2 National TV</span>
+          <span class="s02-tag">34 Classes</span>
+          <span class="s02-tag">9 Venues · 18 Rounds</span>
+        </div>
+      </div>
+      <div style="width:58%;display:grid;grid-template-columns:1fr 1fr;gap:2px">
+        <div class="p-card si" style="--d:.38s"><div class="p-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="p-num">5</div><div class="p-lbl">AMA #1 Plates</div><div class="p-desc">Official East Coast Regional Championship plates awarded in 5 classes</div></div>
+        <div class="p-card si" style="--d:.48s"><div class="p-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="1"/><path d="M8 21h8M12 19v2"/></svg></div><div class="p-num">346</div><div class="p-lbl">TV Airings</div><div class="p-desc">FS1 &amp; FS2 — pro racing on the same platform as NFL &amp; NASCAR</div></div>
+        <div class="p-card si" style="--d:.58s"><div class="p-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><div class="p-num">2,300+</div><div class="p-lbl">Fans Per Event</div><div class="p-desc">Race in front of packed arenas across 9 states every weekend</div></div>
+        <div class="p-card si" style="--d:.68s"><div class="p-icon" style="font-family:var(--race);font-size:32px;line-height:1;margin-bottom:10px">$</div><div class="p-num">$16K+</div><div class="p-lbl">Pro Purse / Weekend</div><div class="p-desc">+ Progressive Championship Bonus starting at $10K+</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S03 — ABOUT THE COMPANY / OWNER -->
+  <div class="slide" id="s03" data-s="below">
+    <div class="s-bnum" style="right:155px">3A</div>
+    <div class="si-wrap" style="flex-direction:row;padding:0;gap:0">
+      <div class="s03-photo si" style="--d:.28s">
+        <img src="Photos/Optimized/Arena (1 of 1).jpg" alt="Arena">
+        <div class="s03-photo-ov"></div>
+        <div class="s03-quote-bg">
+          <div class="s03-founder-tag">
+            <div class="s03-ft-name">Bobby Snyder</div>
+            <div class="s03-ft-title">Founder & Owner, TriStar MX</div>
+          </div>
+        </div>
+      </div>
+      <div class="s03-r">
+        <div class="s-label si" style="--d:.36s">About the Company <span style="opacity:.45;margin:0 3px">•</span> Owner</div>
+        <div class="s-title si" style="--d:.46s;margin:10px 0 4px">Built for <em>Racers</em>,<br>by Racers</div>
+        <img src="Tristar MX Logo.png" alt="TriStar MX" class="s03-logo si" style="--d:.50s">
+        <p class="s03-body si" style="--d:.54s">Bobby Snyder started racing his two young sons at amateur events, frustrated watching kids work so hard for cheap trophies. He created TriStar to give amateur and pro riders alike a professional-caliber experience — from 50cc to Open Pro.</p>
+        <div class="s03-milestones si" style="--d:.62s">
+          <div class="ms-item">
+            <div class="ms-year">YEAR 1</div>
+            <div class="ms-text"><strong>TriStar Indoor Series launches</strong> — competitors from 15 states. A hit right out of the gate.</div>
+          </div>
+          <div class="ms-item">
+            <div class="ms-year">YEAR 2</div>
+            <div class="ms-text"><strong>Pro racing added · FS1 broadcast debut.</strong> National exposure and the deepest pro field in AX.</div>
+          </div>
+          <div class="ms-item">
+            <div class="ms-year">YEAR 3</div>
+            <div class="ms-text"><strong>Partzilla title sponsorship · AMA #1 Plates.</strong> 346 TV airings, 13.2M social views, record attendance.</div>
+          </div>
+        </div>
+        <div class="s03-pull si" style="--d:.74s">
+          <div class="s03-pull-q">"We built something really special — a professional-caliber experience for every rider, from 50cc to Open Pro."</div>
+          <div class="s03-pull-attr">— Bobby Snyder, Founder &amp; Owner, TriStar MX</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S03b — TRACK BUILDER -->
+  <div class="slide" id="s03b" data-s="below">
+    <div class="s-bnum" style="right:155px">3B</div>
+    <div class="si-wrap" style="flex-direction:row;padding:0;gap:0">
+      <div class="s03-photo si" style="--d:.28s">
+        <img src="Photos/Optimized/TRACK (1 of 1)-5.jpg" alt="Track Build" style="object-position:center center">
+        <div class="s03-photo-ov"></div>
+        <div class="s03-quote-bg">
+          <div class="s03-founder-tag">
+            <div class="s03-ft-name">Sonny Leonti</div>
+            <div class="s03-ft-title">Founder &amp; Owner, MXcavation</div>
+          </div>
+        </div>
+      </div>
+      <div class="s03-r">
+        <div class="s-label si" style="--d:.36s">About the Company <span style="opacity:.45;margin:0 3px">•</span> Track Builder</div>
+        <div class="s03b-name si" style="--d:.44s">Full Scale · <em>Full Spec</em> Tracks</div>
+        <img src="Photos/Optimized/MXCavation.jpg" alt="MXcavation" class="s03b-logo si" style="--d:.50s">
+        <div class="s03b-person si" style="--d:.56s">Sonny Leonti — Series Track Builder</div>
+        <p class="s03b-bio si" style="--d:.62s">Sonny Leonti is a renowned Motocross and Supercross track builder based in Mooresville, North Carolina. As the founder and owner of MXcavation, he has established a reputation for designing and constructing professional-grade tracks for riders and organizations worldwide. His expertise encompasses a deep understanding of terrain, safety considerations, and the technical demands of modern Supercross, making him a sought-after figure in the industry.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- S04 — AT THE EVENT -->
+  <div class="slide" id="s04" data-s="below">
+    <div class="s-bnum">04</div>
+    <div class="si-wrap" style="padding:0;gap:0">
+      <div class="s04-hd si" style="--d:.28s">
+        <div>
+          <div class="s-label">Race Weekend</div>
+          <div class="s-title" style="margin-top:8px">Full <em>Weekend</em> Experience</div>
+        </div>
+        <div class="s04-hd-stats">
+          <div class="s04-hs"><div class="s04-hs-n">18</div><div class="s04-hs-l">Rounds</div></div>
+          <div class="s04-hs"><div class="s04-hs-n">9</div><div class="s04-hs-l">Venues</div></div>
+          <div class="s04-hs"><div class="s04-hs-n">2K+</div><div class="s04-hs-l">Fans / Night</div></div>
+          <div class="s04-hs"><div class="s04-hs-n">400+</div><div class="s04-hs-l">Amateur Entries</div></div>
+        </div>
+      </div>
+      <div class="s04-panels">
+        <div class="s04p si" style="--d:.38s">
+          <img src="Photos/Optimized/Gate (1 of 1)-2.jpg" alt="Friday Night">
+          <div class="s04p-ov"></div>
+          <div class="s04p-content">
+            <div class="s04p-day">Friday Night · Live on FS1 · Rebroadcast on FS2</div>
+            <div class="s04p-title">Pro / All-Star<br>Night 1</div>
+            <ul class="s04p-list">
+              <li>Open Pro &amp; 250 Pro main events</li>
+              <li>65 All-Star, 85 All-Star &amp; Schoolboy 12–17</li>
+              <li>Riders meeting 3:30 PM · Practice 4–5 PM</li>
+              <li>Racing starts 7:30 PM</li>
+            </ul>
+            <div class="s04p-badge">FS1 &amp; FS2</div>
+          </div>
+        </div>
+        <div class="s04p si" style="--d:.48s">
+          <img src="Photos/Optimized/32 with crowd (1 of 1)-2.jpg" alt="Saturday Day">
+          <div class="s04p-ov"></div>
+          <div class="s04p-content">
+            <div class="s04p-day">Saturday Morning</div>
+            <div class="s04p-title">Amateur<br>Program</div>
+            <ul class="s04p-list">
+              <li>400+ entries · all classes 50cc–Open</li>
+              <li>Registration 7–8 AM · Riders meeting 8:15 AM</li>
+              <li>Practice 8:30 AM · Racing 9:20 AM–3:30 PM</li>
+              <li>34 classes from 50 Shaft to Open C</li>
+            </ul>
+            <div class="s04p-badge">All Classes</div>
+          </div>
+        </div>
+        <div class="s04p si" style="--d:.58s">
+          <img src="Photos/Optimized/351 pack air (1 of 1).jpg" alt="Saturday Night">
+          <div class="s04p-ov"></div>
+          <div class="s04p-content">
+            <div class="s04p-day">Saturday Night · Live on FS1 · Rebroadcast on FS2</div>
+            <div class="s04p-title">Pro / All-Star<br>Night 2</div>
+            <ul class="s04p-list">
+              <li>Open Pro &amp; 250 Pro main events</li>
+              <li>65 All-Star, 85 All-Star &amp; Schoolboy 12–17</li>
+              <li>Riders meeting 3:30 PM · Practice 4–5 PM</li>
+              <li>Racing starts 7:30 PM</li>
+            </ul>
+            <div class="s04p-badge">FS1 &amp; FS2</div>
+          </div>
+        </div>
+      </div>
+      <div class="mob-swipe-x si" style="--d:.64s">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        <span>Swipe Between Nights</span>
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+      <div class="s04-pricing si" style="--d:.68s">
+        <div class="s04-pr-item">
+          <div class="s04-pr-n">$35</div>
+          <div class="s04-pr-l">Amateur Entry (Pre-Reg)</div>
+        </div>
+        <div class="s04-pr-item">
+          <div class="s04-pr-n">$100</div>
+          <div class="s04-pr-l">Pro Entry (Pre-Reg)</div>
+        </div>
+        <div class="s04-pr-item">
+          <div class="s04-pr-n">$30</div>
+          <div class="s04-pr-l">Gate Pass (Fri–Sat)</div>
+        </div>
+        <div class="s04-pr-item">
+          <div class="s04-pr-n">$265</div>
+          <div class="s04-pr-l">Season Credential</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S05 — PRO PURSE & CHAMPIONSHIP BONUS -->
+  <div class="slide" id="s05" data-s="below">
+    <div class="s-bg"></div>
+    <div class="s-bnum">05</div>
+    <div class="si-wrap rpad">
+      <div class="s-label si" style="--d:.3s">Money on the Line</div>
+      <div class="s-title si" style="--d:.4s;margin-top:10px">Pro <em>Purse</em> &amp; Championship Bonus</div>
+      <div class="purse-grid" style="gap:12px">
+        <div class="purse-panel si" style="--d:.48s">
+          <div class="purse-panel-title"><em>Open Pro</em></div>
+          <table class="purse-table">
+            <thead><tr><th>Place</th><th>Night 1</th><th>Night 2</th></tr></thead>
+            <tbody>
+              <tr><td>1st</td><td>$1,800</td><td>$1,800</td></tr>
+              <tr><td>2nd</td><td>$1,200</td><td>$1,200</td></tr>
+              <tr><td>3rd</td><td>$950</td><td>$950</td></tr>
+              <tr><td>4th</td><td>$750</td><td>$750</td></tr>
+              <tr><td>5th</td><td>$500</td><td>$500</td></tr>
+              <tr><td>6th</td><td>$400</td><td>$400</td></tr>
+              <tr><td>7th</td><td>$300</td><td>$300</td></tr>
+              <tr><td>8th</td><td>$250</td><td>$250</td></tr>
+              <tr><td>9th</td><td>$200</td><td>$200</td></tr>
+              <tr><td>10th</td><td>$200</td><td>$200</td></tr>
+            </tbody>
+          </table>
+          <div class="purse-total">
+            <div class="purse-total-lbl">Per Weekend (2 Nights)</div>
+            <div class="purse-total-n">$12,700</div>
+          </div>
+        </div>
+        <div class="purse-panel si" style="--d:.56s">
+          <div class="purse-panel-title"><em>250 Pro</em></div>
+          <table class="purse-table">
+            <thead><tr><th>Place</th><th>Night 1</th><th>Night 2</th></tr></thead>
+            <tbody>
+              <tr><td>1st</td><td>$500</td><td>$500</td></tr>
+              <tr><td>2nd</td><td>$400</td><td>$400</td></tr>
+              <tr><td>3rd</td><td>$300</td><td>$300</td></tr>
+              <tr><td>4th</td><td>$200</td><td>$200</td></tr>
+              <tr><td>5th</td><td>$100</td><td>$100</td></tr>
+            </tbody>
+          </table>
+          <div class="purse-total">
+            <div class="purse-total-lbl">Per Weekend</div>
+            <div class="purse-total-n">$3,000</div>
+          </div>
+        </div>
+        <div class="prog-bonus si" style="--d:.64s">
+          <div class="prog-bonus-h">Partzilla Progressive Championship Bonus</div>
+          <div class="prog-bonus-desc">The first of its kind in Arenacross — a true revenue-sharing championship reward. A percentage of ticket sales from every round is added to the pot. Guaranteed base of $10,000+, scaling with fan attendance. Paid to the top 7 in final Open Pro standings.</div>
+          <table class="prog-table">
+            <thead><tr><th>Pot Size</th><th>1st</th><th>2nd</th><th>3rd</th><th>4th</th><th>5th</th><th>6th</th><th>7th</th></tr></thead>
+            <tbody>
+              <tr><td>$10K</td><td>$4,000</td><td>$2,000</td><td>$1,300</td><td>$1,000</td><td>$700</td><td>$600</td><td>$400</td></tr>
+              <tr><td>$50K</td><td>$20,000</td><td>$10,000</td><td>$6,500</td><td>$5,000</td><td>$3,500</td><td>$3,000</td><td>$2,000</td></tr>
+              <tr><td>$100K</td><td>$40,000</td><td>$20,000</td><td>$13,000</td><td>$10,000</td><td>$7,000</td><td>$6,000</td><td>$4,000</td></tr>
+              <tr><td>$150K</td><td>$60,000</td><td>$30,000</td><td>$19,500</td><td>$15,000</td><td>$10,500</td><td>$9,000</td><td>$6,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S06 — BROADCAST / YOUR EXPOSURE -->
+  <div class="slide" id="s06" data-s="below">
+    <div class="s-bnum" style="right:155px">06</div>
+    <div class="si-wrap" style="flex-direction:row;padding:0;gap:0">
+      <div class="s06-photo si" style="--d:.3s">
+        <img src="Photos/Optimized/32 interview (1 of 1).jpg" alt="Broadcast Interview" style="object-position:center top">
+        <div class="s06-photo-ov"></div>
+        <div class="s06-badge">
+          <div class="s06-bt">FOX SPORTS</div>
+          <div class="s06-bs">FS1 · FS2 · National Broadcast</div>
+          <div class="s06-fs-logos">
+            <span class="s06-fs-logo">FS1</span>
+            <span class="s06-fs-logo">FS2</span>
+          </div>
+        </div>
+      </div>
+      <div class="s06-r">
+        <div class="s-label si" style="--d:.38s">Exposure</div>
+        <div class="s-title si" style="--d:.48s;margin:10px 0;font-size:clamp(24px,3.5vw,46px)">Pros Race on <em>National TV</em></div>
+        <p class="s06-body si" style="--d:.56s">Races air live on FS1 and are rebroadcast on FS2, reaching ~90 million U.S. households — the same platform as NFL and NASCAR. 346 airings means your name, number, and sponsors get constant national exposure. Professional multi-camera production, post-race interviews, and integration into Supercross programming. This is your path to being seen.</p>
+        <div class="s06-metrics">
+          <div class="mc si" style="--d:.62s"><div class="mc-n"><span class="ctr" data-t="346">346</span></div><div class="mc-l">Total TV Airings</div><div class="mc-s">FS1 + FS2 · Oct–present</div></div>
+          <div class="mc si" style="--d:.69s"><div class="mc-n">~90M</div><div class="mc-l">FS1 Households</div><div class="mc-s">Same reach as NFL &amp; NASCAR</div></div>
+          <div class="mc si" style="--d:.76s"><div class="mc-n">13.2M</div><div class="mc-l">Social Media Views</div><div class="mc-s">Facebook · +2,432% YOY</div></div>
+          <div class="mc si" style="--d:.83s"><div class="mc-n">1M+</div><div class="mc-l">Instagram Views / Month</div><div class="mc-s">92% organic reach</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S07 — RACE CLASSES (FULL LIST) -->
+  <div class="slide" id="s07" data-s="below">
+    <div class="s-bnum">07</div>
+    <div class="si-wrap rpad" style="overflow:hidden">
+      <div class="s-label si" style="--d:.3s">Arenacross Class List</div>
+      <div class="s-title si" style="--d:.4s;margin-top:10px"><em>34</em> Classes — Full Class List</div>
+      <div class="si" style="--d:.48s;display:flex;gap:12px;flex:1;min-height:0;margin-top:10px;overflow:hidden">
+        <!-- LEFT COLUMN: Youth + Schoolboy -->
+        <div style="flex:1;overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(245,255,0,.2) transparent">
+          <table class="sched" style="margin:0">
+            <thead><tr><th>#</th><th>Class</th><th>Requirements</th></tr></thead>
+            <tbody>
+              <tr><td><span class="rd">1</span></td><td class="vn">50 Shaft Limited (4–6)</td><td>0–51cc Single speed shaft-drive 2-Stroke. <strong style="color:var(--accent)">KTM/GASGAS E2 ALLOWED</strong></td></tr>
+              <tr><td><span class="rd">1.1</span></td><td class="vn">50 Beginner (4–8)</td><td>0–51cc 2-Stroke, Single Speed Auto, WB 41in, Wheel 12in. <em>First year racers only</em></td></tr>
+              <tr><td><span class="rd">1.2</span></td><td class="vn">50 Open (4–8)</td><td>0–51cc 2-Stroke, Single Speed Auto, WB 41in, Wheel 12in</td></tr>
+              <tr><td><span class="rd">2</span></td><td class="vn">50 JR Limited (4–6)</td><td>0–51cc 2-Stroke, Single Speed Auto, WB 36in, Wheel 10in, Seat 24in</td></tr>
+              <tr><td><span class="rd">3</span></td><td class="vn">50 SR Limited (7–8)</td><td>0–51cc 2-Stroke, Single Speed Auto, WB 41in, Wheel 12in</td></tr>
+              <tr><td><span class="rd">4</span></td><td class="vn">Micro-E Limited (4–8)</td><td>1.5 kWh Battery Energy, WB 41in, Wheel 12in</td></tr>
+              <tr><td><span class="rd">5</span></td><td class="vn">65 JR (7–9)</td><td>59–65cc 2-Stroke, WB 45in, Front 14in</td></tr>
+              <tr><td><span class="rd">6</span></td><td class="vn">65 SR (10–11)</td><td>59–65cc 2-Stroke, WB 45in, Front 14in</td></tr>
+              <tr><td><span class="rd">7</span></td><td class="vn">65 Open (7–11)</td><td>59–65cc 2-Stroke, WB 45in, Front 14in</td></tr>
+              <tr style="background:rgba(245,255,0,.04)"><td><span class="rd">8</span></td><td class="vn"><strong>65 All-Stars (7–11) **</strong></td><td>59–65cc 2-Stroke, WB 45in, Front 14in</td></tr>
+              <tr><td><span class="rd">9</span></td><td class="vn">85 JR (9–11)</td><td>79–85cc 2-Stroke, Front 17", Rear 14", WB 51.5"</td></tr>
+              <tr><td><span class="rd">10</span></td><td class="vn">85 SR (12–15)</td><td>79–85cc 2-Stroke, Front 19", Rear 16", WB 52.5"</td></tr>
+              <tr><td><span class="rd">11</span></td><td class="vn">85 Open (9–15)</td><td>79–85cc 2-Stroke, Front 19", Rear 16", WB 52.5"</td></tr>
+              <tr style="background:rgba(245,255,0,.04)"><td><span class="rd">12</span></td><td class="vn"><strong>85 All-Stars (9–15) **</strong></td><td>79–85cc 2-Stk/75–150cc 4-Stk, WB 51in, Front 19", Rear 16"</td></tr>
+              <tr><td><span class="rd">13</span></td><td class="vn">Supermini 1 (12–15)</td><td>79–112cc 2-Stk/75–150cc 4-Stk, WB 52in, Front 19", Rear 16"</td></tr>
+              <tr><td><span class="rd">14</span></td><td class="vn">Supermini 2 (14–16)</td><td>79–112cc 2-Stk/75–150cc 4-Stk, Front 19", Rear 16"</td></tr>
+              <tr><td><span class="rd">15</span></td><td class="vn">Girls (11–16)</td><td>79–112cc 2-Stk/75–150cc 4-Stk, Front 19", Rear 16". Must be 12 to ride Supermini</td></tr>
+              <tr><td><span class="rd">16</span></td><td class="vn">Schoolboy 1 (12–17)</td><td>86–125cc 2-Stk/75–150cc 4-Stk, Min Front 19", Min Rear 16"</td></tr>
+              <tr style="background:rgba(245,255,0,.04)"><td><span class="rd">17</span></td><td class="vn"><strong>Schoolboy 2 (12–17) **</strong></td><td>122–250cc 2-Stk/4-Stk. No minicycle/Supermini. Must be 14 to race 250cc</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- RIGHT COLUMN: Amateur + Pro + E-Moto -->
+        <div style="flex:1;overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(245,255,0,.2) transparent">
+          <table class="sched" style="margin:0">
+            <thead><tr><th>#</th><th>Class</th><th>Requirements</th></tr></thead>
+            <tbody>
+              <tr><td><span class="rd">18</span></td><td class="vn">WMX</td><td>122–250cc. Must be 14 to race 250cc. Min Front 21", Rear 18"</td></tr>
+              <tr><td><span class="rd">19</span></td><td class="vn">125 2-Stroke</td><td>122–125cc</td></tr>
+              <tr><td><span class="rd">20</span></td><td class="vn">Open 2-Stroke</td><td>122–Open. Must be 14 to race 250cc</td></tr>
+              <tr><td><span class="rd">21</span></td><td class="vn">College Boy (18–24)</td><td>122cc–Open 2-Stroke/4-Stroke</td></tr>
+              <tr><td><span class="rd">22</span></td><td class="vn">25+</td><td>122cc–Open 2-Stroke/4-Stroke</td></tr>
+              <tr><td><span class="rd">23</span></td><td class="vn">30+</td><td>122cc–Open 2-Stroke/4-Stroke</td></tr>
+              <tr><td><span class="rd">24</span></td><td class="vn">40+</td><td>122cc–Open 2-Stroke/4-Stroke</td></tr>
+              <tr><td><span class="rd">25</span></td><td class="vn">50+</td><td>122cc–Open 2-Stroke/4-Stroke</td></tr>
+              <tr><td><span class="rd">26</span></td><td class="vn">60+</td><td>122cc–Open 2-Stroke/4-Stroke</td></tr>
+              <tr><td><span class="rd">27</span></td><td class="vn">Open Beginner</td><td>122cc–Open 2-Stk/4-Stk. Max 1 year racing exp. No C Riders</td></tr>
+              <tr><td><span class="rd">28</span></td><td class="vn">250 C</td><td>122–250cc 2-Stroke/4-Stroke</td></tr>
+              <tr><td><span class="rd">29</span></td><td class="vn">250 B</td><td>122–250cc 2-Stroke/4-Stroke</td></tr>
+              <tr><td><span class="rd">30</span></td><td class="vn">Open B</td><td>122–Open cc</td></tr>
+              <tr><td><span class="rd">31</span></td><td class="vn">Open C</td><td>122–Open cc</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top:8px;padding:8px 12px;background:rgba(245,255,0,.06);border:1px solid rgba(245,255,0,.15);border-radius:2px">
+            <div style="font-family:var(--race);font-size:11px;letter-spacing:.1em;color:var(--accent);margin-bottom:6px">PRO CLASSES ** — TELEVISED ON FS1 &amp; FS2</div>
+            <table class="sched" style="margin:0">
+              <tbody>
+                <tr style="background:rgba(245,255,0,.04)"><td><span class="rd">32</span></td><td class="vn"><strong>ARENACROSS 250 (PRO)</strong></td><td>122–250cc 2-Stroke/4-Stroke</td></tr>
+                <tr style="background:rgba(245,255,0,.04)"><td><span class="rd">33</span></td><td class="vn"><strong>ARENACROSS OPEN (PRO)</strong></td><td>122–Open cc</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="margin-top:6px;padding:8px 12px;background:var(--d2);border-radius:2px">
+            <div style="font-family:var(--race);font-size:11px;letter-spacing:.1em;color:var(--accent);margin-bottom:6px">E-MOTO</div>
+            <table class="sched" style="margin:0">
+              <tbody>
+                <tr><td><span class="rd">34</span></td><td class="vn">OPEN E-MOTO</td><td>60V (Class B) 60HP limit. Stark Varg or similar</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="sched-note si" style="--d:.7s">** Will be a televised class on Friday and Saturday nights on FS1, rebroadcast on FS2 &nbsp;|&nbsp; <em>NOTE: Must be 14 years old to race 250cc and 16 years old to race 450cc</em> &nbsp;|&nbsp; <a href="https://partzillaarenacross.com/pages/rulebook" target="_blank" style="color:var(--accent);text-decoration:none">View Full Rulebook →</a></div>
+    </div>
+  </div>
+
+  <!-- S08 — SCHEDULE -->
+  <div class="slide" id="s08" data-s="below">
+    <div class="s-bnum">08</div>
+    <div class="si-wrap rpad">
+      <div class="s-label si" style="--d:.3s">2026–2027 Season</div>
+      <div class="s-title si" style="--d:.4s;margin-top:10px">Race <em>Schedule</em></div>
+      <table class="sched si" style="--d:.5s">
+        <thead><tr><th>Rounds</th><th>Date</th><th>Venue</th><th>City / State</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><span class="rd">1–2</span></td><td>Oct 2026</td><td class="vn">F&amp;M Bank Arena</td><td>Clarksville, TN</td><td><span class="stb st-finale"><span class="st-dot"></span>Season Opener</span></td></tr>
+          <tr><td><span class="rd">3–4</span></td><td>Oct 2026</td><td class="vn">Garrett Coliseum</td><td>Montgomery, AL</td><td></td></tr>
+          <tr><td><span class="rd">5–6</span></td><td>Nov 2026</td><td class="vn">RP Funding Center</td><td>Lakeland, FL</td><td></td></tr>
+          <tr><td><span class="rd">7–8</span></td><td>Nov 2026</td><td class="vn">Crown Coliseum</td><td>Fayetteville, NC</td><td></td></tr>
+          <tr><td><span class="rd">9–10</span></td><td>Dec 2026</td><td class="vn">Macon Coliseum</td><td>Macon, GA</td><td></td></tr>
+          <tr><td><span class="rd">11–12</span></td><td>Dec 2026</td><td class="vn">Sudduth Coliseum</td><td>Lake Charles, LA</td><td></td></tr>
+          <tr><td><span class="rd">13–14</span></td><td>Jan 2027</td><td class="vn">Salem Civic Center</td><td>Salem, VA</td><td></td></tr>
+          <tr><td><span class="rd">15–16</span></td><td>Jan 2027</td><td class="vn">Huntington Center</td><td>Toledo, OH</td><td></td></tr>
+          <tr><td><span class="rd">Finale</span></td><td>Jan/Feb 2027</td><td class="vn">Florence Center</td><td>Florence, SC</td><td><span class="stb st-finale"><span class="st-dot"></span>Championship</span></td></tr>
+        </tbody>
+      </table>
+      <div class="sched-note si" style="--d:.7s">
+        Pro / All-Star (Fri &amp; Sat Nights): Open Pro · 250 Pro · 65 All-Stars · 85 All-Stars · Schoolboy 2 &nbsp;|&nbsp; Amateur (Sat): Full class structure 50cc–Open
+        &nbsp;|&nbsp; <a href="https://partzillaarenacross.com" target="_blank" style="color:var(--accent);text-decoration:none">Full schedule &amp; tickets →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- S09 — TEAM/RACER INCENTIVES -->
+  <div class="slide" id="s09" data-s="below">
+    <div class="s-bnum">09</div>
+    <div class="si-wrap rpad">
+      <div class="s-label si" style="--d:.3s">Commit to the Full Series</div>
+      <div class="s-title si" style="--d:.4s;margin-top:10px">Team &amp; Racer <em>Incentives</em></div>
+      <div class="incentive-grid">
+        <div class="inc-card inc-featured si" style="--d:.48s">
+          <div class="inc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div class="inc-name">Professional Pit Setup</div>
+          <div class="inc-desc">Tension fabric backdrop, side barriers (2), and security chain barrier for front — all printed with your team logos/sponsors. We transport, set up &amp; take down at every round.</div>
+          <div class="inc-highlight">Included</div>
+        </div>
+        <div class="inc-card si" style="--d:.54s">
+          <div class="inc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <div class="inc-name">Bike Transport</div>
+          <div class="inc-desc">Ship your bikes with us for the full series. We handle transport to every round so you can focus on racing.</div>
+          <div class="inc-highlight">$3,500 / Season</div>
+        </div>
+        <div class="inc-card si" style="--d:.60s">
+          <div class="inc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+          <div class="inc-name">Merchandise Booth</div>
+          <div class="inc-desc">Sell your team merch at every event — we provide the booth space and setup. Merch revenue goes to you, no cost.</div>
+          <div class="inc-highlight">No Cost to You</div>
+        </div>
+        <div class="inc-card si" style="--d:.66s">
+          <div class="inc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="1"/><path d="M8 21h8M12 19v2"/></svg></div>
+          <div class="inc-name">FS1 &amp; FS2 National TV</div>
+          <div class="inc-desc">Pro/All-Star classes air live on FS1 Friday and Saturday nights, with rebroadcasts on FS2. Your riding, your sponsors, your brand — on 90M households.</div>
+          <div class="inc-highlight">346 Airings</div>
+        </div>
+        <div class="inc-card si" style="--d:.72s">
+          <div class="inc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div class="inc-name">Grow Your Fanbase</div>
+          <div class="inc-desc">Exposure across all rounds, Pit Party Fan Fests, social media coverage, and direct fan interaction at packed arenas every weekend.</div>
+          <div class="inc-highlight">2,300+ Fans / Night</div>
+        </div>
+        <div class="inc-card si" style="--d:.78s">
+          <div class="inc-icon" style="font-family:var(--race);font-size:28px;line-height:1;color:var(--accent)">$</div>
+          <div class="inc-name">Lower Your Costs</div>
+          <div class="inc-desc">Centralized team services, season credentials ($265), lowest entry fees in the sport, and OEM contingency programs from all 6 major manufacturers.</div>
+          <div class="inc-highlight">6 OEM Contingencies</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S10 — REGISTRATION & CONTINGENCY -->
+  <div class="slide" id="s10" data-s="below">
+    <div class="s-bnum">10</div>
+    <div class="s11-mob-bg">
+      <img src="Photos/Optimized/Load In (1 of 1)-17.jpg" alt="">
+      <div class="s11-mob-bg-ov"></div>
+    </div>
+    <div class="si-wrap rpad">
+      <div class="s-label si" style="--d:.3s">How to Enter</div>
+      <div class="s-title si" style="--d:.4s;margin-top:10px">Registration &amp; <em>Contingency</em></div>
+      <div class="reg-wrap">
+        <div class="reg-left">
+          <div class="reg-block si" style="--d:.48s;flex:1">
+            <div class="reg-block-title">Pre-Register Online</div>
+            <div class="reg-block-desc">Secure your spot, transponder, and save $10 on entry. Pre-registration is strongly recommended — transponders sell out fast. Registration closes at 4:00 PM on both Friday and Saturday.</div>
+            <a href="https://secure.tracksideprereg.com/tsmx/" target="_blank" class="reg-cta-btn">Pre-Register Now</a>
+          </div>
+          <div class="reg-block si" style="--d:.54s">
+            <div class="reg-block-title">AMA Membership Required</div>
+            <div class="reg-block-desc">All competitors must have a valid AMA membership. Use promoter code <strong style="color:var(--accent)">TRISMX</strong> when signing up at <a href="https://www.americanmotorcyclist.com" target="_blank">americanmotorcyclist.com</a></div>
+          </div>
+          <div class="reg-block si" style="--d:.60s">
+            <div class="reg-block-title">Entry Fees</div>
+            <div class="reg-fees">
+              <div class="fee-item"><div class="fee-label">Amateur (Pre-Reg)</div><div class="fee-amount">$35</div></div>
+              <div class="fee-item"><div class="fee-label">Amateur (On-Site)</div><div class="fee-amount">$45</div></div>
+              <div class="fee-item"><div class="fee-label">Pro (Pre-Reg)</div><div class="fee-amount">$100</div></div>
+              <div class="fee-item"><div class="fee-label">Pro (On-Site)</div><div class="fee-amount">$120</div></div>
+            </div>
+            <div class="reg-block-desc" style="margin-top:6px;font-size:9px">Transponder rental: $30 + $100 refundable deposit &nbsp;|&nbsp; Gate Pass: $30 (Fri–Sat) or $40 (Thu–Sat) &nbsp;|&nbsp; Season Credential: $265</div>
+          </div>
+        </div>
+        <div class="reg-right">
+          <div class="reg-block si" style="--d:.64s">
+            <div class="reg-block-title">OEM Contingency Programs</div>
+            <div class="reg-block-desc">All 6 major manufacturers offer contingency payouts. Register with your OEM before race day:</div>
+            <div class="oem-grid">
+              <div class="oem-card"><div class="oem-name">KTM</div><div class="oem-url">ktmcash.com</div></div>
+              <div class="oem-card"><div class="oem-name">GasGas</div><div class="oem-url">gasgasracer.com</div></div>
+              <div class="oem-card"><div class="oem-name">Husqvarna</div><div class="oem-url">racehusky.com</div></div>
+              <div class="oem-card"><div class="oem-name">Honda</div><div class="oem-url">xtrm.com</div></div>
+              <div class="oem-card"><div class="oem-name">Yamaha</div><div class="oem-url">yamahamotorsports.com</div></div>
+              <div class="oem-card"><div class="oem-name">Suzuki</div><div class="oem-url">xtrm.com</div></div>
+            </div>
+          </div>
+          <div class="reg-block si" style="--d:.70s;flex:1">
+            <div class="reg-block-title">Registration Steps</div>
+            <div class="reg-block-desc" style="display:flex;flex-direction:column;gap:5px">
+              <div><strong style="color:var(--accent)">1.</strong> Minor Release — must be completed by parent(s) if applicable</div>
+              <div><strong style="color:var(--accent)">2.</strong> AMA Membership — required for all TRISTAR MX events (code: TRISMX)</div>
+              <div><strong style="color:var(--accent)">3.</strong> Transponder — required for all competitors ($30 rental + $100 deposit)</div>
+              <div><strong style="color:var(--accent)">4.</strong> Registration — entry payment + wristband distribution</div>
+            </div>
+            <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+              <a href="https://partzillaarenacross.com" target="_blank" class="reg-cta-btn">Visit PartzillaArenacross.com</a>
+              <a href="https://partzillaarenacross.com/pages/rulebook" target="_blank" class="reg-cta-btn" style="background:transparent;color:var(--accent);border:1px solid var(--accent)">View Rulebook</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S11 — CTA / LINKS -->
+  <div class="slide" id="s11" data-s="below">
+    <div class="s-bg"></div>
+    <div class="s-ov"></div>
+    <div class="si-wrap" style="align-items:center;justify-content:center;text-align:center;padding-right:150px;overflow-y:auto;padding-bottom:100px;">
+      <div style="margin:auto 0;width:100%;display:flex;flex-direction:column;align-items:center;padding-top:20px;">
+      <img src="Partzilla Logo lite.png" alt="Partzilla Arenacross" class="si" style="--d:.2s;width:240px;margin-bottom:14px;filter:drop-shadow(0 4px 24px rgba(0,0,0,.7))">
+      <div class="cta-eye si" style="--d:.32s">AMA #1 Plates · Live on FS1 · Rebroadcast on FS2 · Progressive Purse</div>
+      <div class="cta-h si" style="--d:.4s">COME <em>RACE</em><br>WITH US</div>
+      <p class="cta-body si" style="--d:.5s">The East Coast's premier Arenacross series. 34 classes, 18 rounds, 9 venues, packed arenas, national TV, and the industry's first progressive championship bonus. From 50cc minis to Open Pro — there's a gate for everyone.</p>
+      <div class="cta-links si" style="--d:.58s">
+        <a href="https://secure.tracksideprereg.com/tsmx/" target="_blank" class="cta-link-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+          <div class="cta-link-title">Pre-Register</div>
+          <div class="cta-link-sub">Secure Your Spot</div>
+        </a>
+        <a href="https://partzillaarenacross.com" target="_blank" class="cta-link-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <div class="cta-link-title">Full Website</div>
+          <div class="cta-link-sub">Schedule · Classes · Rules</div>
+        </a>
+        <a href="https://resultsmx.com/tristarmx" target="_blank" class="cta-link-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          <div class="cta-link-title">Live Results</div>
+          <div class="cta-link-sub">Points &amp; Standings</div>
+        </a>
+      </div>
+      <div class="cta-btns si" style="--d:.66s">
+        <a href="https://secure.tracksideprereg.com/tsmx/" target="_blank" class="btn-y">Pre-Register Now</a>
+        <a href="https://partzillaarenacross.com" target="_blank" class="btn-o">Visit Website</a>
+      </div>
+      <div class="cta-contact si" style="--d:.78s">
+        <div class="cci"><div class="cci-l">Email</div><div class="cci-v"><a href="mailto:info@partzillaarenacross.com">info@partzillaarenacross.com</a></div></div>
+        <div class="cci"><div class="cci-l">Phone</div><div class="cci-v"><a href="tel:9312787775">(931) 278-7775</a></div></div>
+        <div class="cci"><div class="cci-l">Website</div><div class="cci-v"><a href="https://partzillaarenacross.com" target="_blank">partzillaarenacross.com</a></div></div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /slides -->
+
+<!-- ── SIDE NAV ──────────────────────────────── -->
+<nav id="snav">
+  <div class="sn-track"></div>
+  <div class="sni on" data-g="0"><span class="sni-lbl">Cover</span><span class="sni-pip"></span></div>
+  <div class="sni" data-g="1"><span class="sni-lbl">Why Race</span><span class="sni-pip"></span></div>
+  <div class="sni-grp">
+    <div class="sni-grp-lbl">About the Company</div>
+    <div class="sni sni-sub" data-g="2"><span class="sni-lbl">Owner</span><span class="sni-pip"></span></div>
+    <div class="sni sni-sub" data-g="3"><span class="sni-lbl">Track Builder</span><span class="sni-pip"></span></div>
+  </div>
+  <div class="sni" data-g="4"><span class="sni-lbl">Race Weekend</span><span class="sni-pip"></span></div>
+  <div class="sni" data-g="5"><span class="sni-lbl">Pro Purse</span><span class="sni-pip"></span></div>
+  <div class="sni" data-g="6"><span class="sni-lbl">Exposure</span><span class="sni-pip"></span></div>
+  <div class="sni" data-g="7"><span class="sni-lbl">Classes</span><span class="sni-pip"></span></div>
+  <div class="sni" data-g="8"><span class="sni-lbl">Schedule</span><span class="sni-pip"></span></div>
+  <div class="sni" data-g="9"><span class="sni-lbl">Incentives</span><span class="sni-pip"></span></div>
+  <div class="sni" data-g="10"><span class="sni-lbl">Registration</span><span class="sni-pip"></span></div>
+  <div class="sni" data-g="11"><span class="sni-lbl">Race With Us</span><span class="sni-pip"></span></div>
+</nav>
+
+<!-- ── BOTTOM BAR ─────────────────────────────── -->
+<div id="bottombar">
+  <div class="bb-section">
+    <div class="bb-page"><span id="bb-cur">01</span><span class="bb-sep">/</span><span class="bb-tot">12</span></div>
+    <div class="bb-divider"></div>
+    <div class="bb-arrows">
+      <button id="bb-up" title="Previous Slide"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg></button>
+      <button id="bb-dn" title="Next Slide"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+      <button id="bb-home" title="Cover"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></button>
+      <button id="bb-contact" title="Contact Us"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></button>
+    </div>
+  </div>
+  <div class="bb-section">
+    <a href="https://partzillaarenacross.com" target="_blank" class="bb-link">partzillaarenacross.com</a>
+    <div class="bb-divider"></div>
+    <a href="https://secure.tracksideprereg.com/tsmx/" target="_blank" class="bb-btn">Pre-Register</a>
+    <div class="bb-divider"></div>
+    <div class="bb-social">
+      <a href="https://www.instagram.com/partzillaarenacross/" target="_blank" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C16.67.014 16.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+      <a href="https://www.facebook.com/partzillaarenacross" target="_blank" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE NAV BAR -->
+<div id="mob-bar">
+  <div class="mb-nav-group">
+    <button class="mb-btn" id="mb-home" title="Cover">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </button>
+    <button class="mb-btn" id="mb-prev" title="Previous">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+  </div>
+  <div class="mb-center">
+    <div id="mb-page">01 / 12</div>
+    <div id="mb-title">Cover</div>
+  </div>
+  <div class="mb-nav-group">
+    <button class="mb-btn" id="mb-next" title="Next">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <button class="mb-btn" id="mb-contact" title="Contact">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+// ─── CURSOR ──────────────────────────────────
+const cur = document.getElementById('cur');
+const ring = document.getElementById('cur-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX; my=e.clientY;
+  cur.style.left=mx+'px'; cur.style.top=my+'px';
+});
+(function rafLoop(){
+  rx+=(mx-rx)*.12; ry+=(my-ry)*.12;
+  ring.style.left=rx+'px'; ring.style.top=ry+'px';
+  requestAnimationFrame(rafLoop);
+})();
+document.querySelectorAll('a,button,.sni,.p-card,.mc,.rc,.s04p,.cls-card,.inc-card,.oem-card,.cta-link-card,.reg-block,.purse-panel').forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('chov'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('chov'));
+});
+
+// ─── MOBILE INLINE-STYLE RESET ───────────────
+(function(){
+  if(window.innerWidth > 900) return;
+  document.querySelectorAll('.si-wrap').forEach(el=>{
+    ['flex-direction','gap','align-items','justify-content','padding-bottom',
+     'padding-right','padding','text-align'].forEach(p=>el.style.removeProperty(p));
+  });
+  document.querySelectorAll('.si-wrap > div[style]').forEach(el=>{
+    ['width','flex-direction','justify-content','display','align-items','gap']
+      .forEach(p=>el.style.removeProperty(p));
+  });
+})();
+
+// ─── LOADER ──────────────────────────────────
+window.addEventListener('load',()=>{
+  setTimeout(()=>{
+    document.getElementById('loader').classList.add('out');
+    fireCounters(slides[0]);
+  },1400);
+});
+
+// ─── SLIDE ENGINE ─────────────────────────────
+const slides = Array.from(document.querySelectorAll('.slide'));
+const N = slides.length;
+let cur_s = 0;
+let busy = false;
+const DUR = 920;
+
+slides.forEach((s,i)=>{ s.dataset.s = i===0?'active':'below'; });
+
+function goTo(idx){
+  if(busy || idx===cur_s || idx<0 || idx>=N) return;
+  busy=true;
+
+  const fl=document.getElementById('flash');
+  fl.classList.add('go');
+  setTimeout(()=>fl.classList.remove('go'),750);
+
+  const dir = idx>cur_s ? 1 : -1;
+  const prev_s = cur_s;
+
+  slides[idx].querySelectorAll('.si').forEach(el=>{
+    el.style.transition='none';
+    el.style.opacity='0';
+    el.style.transform='translateY(16px)';
+  });
+
+  slides[prev_s].dataset.s = dir>0 ? 'above' : 'below';
+  slides[idx].dataset.s = 'active';
+
+  requestAnimationFrame(()=>{
+    requestAnimationFrame(()=>{
+      slides[idx].querySelectorAll('.si').forEach(el=>{
+        el.style.transition='';
+        el.style.opacity='';
+        el.style.transform='';
+      });
+    });
+  });
+
+  cur_s = idx;
+  updateUI();
+  setTimeout(()=>fireCounters(slides[idx]), 400);
+  setTimeout(()=>{ busy=false; }, DUR+60);
+}
+
+// ─── UI UPDATES ───────────────────────────────
+const navItems = document.querySelectorAll('.sni');
+const scN = document.getElementById('bb-cur');
+const slideLabels = Array.from(navItems).map(ni=>ni.querySelector('.sni-lbl').textContent);
+const mbPage = document.getElementById('mb-page');
+const mbTitleEl = document.getElementById('mb-title');
+
+function slidePageLabel(i){
+  if(i===2) return '3A';
+  if(i===3) return '3B';
+  if(i>=4) return String(i).padStart(2,'0');
+  return String(i+1).padStart(2,'0');
+}
+
+function updateUI(){
+  navItems.forEach((ni,i)=>ni.classList.toggle('on', i===cur_s));
+  document.querySelectorAll('.sni-grp').forEach(grp=>{
+    grp.querySelector('.sni-grp-lbl').classList.toggle('on', !!grp.querySelector('.sni.on'));
+  });
+  const lbl = slidePageLabel(cur_s);
+  scN.textContent = lbl;
+  document.getElementById('g-logo').style.opacity = cur_s===0 ? '0' : '';
+  if(mbPage) mbPage.textContent = lbl + ' / 12';
+  if(mbTitleEl) mbTitleEl.textContent = slideLabels[cur_s] || '';
+}
+updateUI();
+
+// ─── INPUT HANDLING ───────────────────────────
+let lastWh = 0;
+window.addEventListener('wheel',e=>{
+  const now=Date.now();
+  if(now-lastWh<300) return;
+  let trg=e.target, isScr=false;
+  while(trg && trg!==document.body){
+    const oY = window.getComputedStyle(trg).overflowY;
+    if((oY==='auto'||oY==='scroll') && trg.scrollHeight>trg.clientHeight+2){
+      if(e.deltaY>0 && Math.ceil(trg.scrollTop+trg.clientHeight)>=trg.scrollHeight-3){}else if(e.deltaY<0 && trg.scrollTop<=3){}else{isScr=true;break;}
+    }
+    trg=trg.parentElement;
+  }
+  if(!isScr) {
+    if(window.innerWidth<=900 && Math.abs(e.deltaY)<5) return;
+    e.preventDefault();
+    lastWh=now;
+    if(e.deltaY>0) goTo(cur_s+1); else goTo(cur_s-1);
+  }
+},{passive:false});
+
+window.addEventListener('keydown',e=>{
+  if(e.key==='ArrowDown'||e.key==='PageDown'||e.key===' ') goTo(cur_s+1);
+  if(e.key==='ArrowUp'||e.key==='PageUp') goTo(cur_s-1);
+});
+
+document.getElementById('bb-dn').addEventListener('click',()=>goTo(cur_s+1));
+document.getElementById('bb-up').addEventListener('click',()=>goTo(cur_s-1));
+document.getElementById('bb-home').addEventListener('click',()=>goTo(0));
+document.getElementById('bb-contact').addEventListener('click',()=>goTo(11));
+
+navItems.forEach(ni=>{
+  ni.addEventListener('click',()=>goTo(parseInt(ni.dataset.g)));
+});
+
+let tStart=0, tStartX=0;
+document.addEventListener('touchstart',e=>{tStart=e.touches[0].clientY; tStartX=e.touches[0].clientX;},{passive:true});
+document.addEventListener('touchend',e=>{
+  const dy=tStart-e.changedTouches[0].clientY;
+  const dx=Math.abs(tStartX-e.changedTouches[0].clientX);
+  if(Math.abs(dy)>50 && Math.abs(dy)>dx){
+    let trg=e.target, isScr=false;
+    while(trg && trg!==document.body){
+      const oY = window.getComputedStyle(trg).overflowY;
+      if((oY==='auto'||oY==='scroll') && trg.scrollHeight>trg.clientHeight+2){
+        if(dy>0 && Math.ceil(trg.scrollTop+trg.clientHeight)>=trg.scrollHeight-3){}else if(dy<0 && trg.scrollTop<=3){}else{isScr=true;break;}
+      }
+      trg=trg.parentElement;
+    }
+    if(!isScr) { if(dy>0) goTo(cur_s+1); else goTo(cur_s-1); }
+  }
+},{passive:true});
+
+// ─── MOBILE NAV BUTTONS ───────────────────────
+document.getElementById('mb-prev').addEventListener('click',()=>goTo(cur_s-1));
+document.getElementById('mb-next').addEventListener('click',()=>goTo(cur_s+1));
+document.getElementById('mb-home').addEventListener('click',()=>goTo(0));
+document.getElementById('mb-contact').addEventListener('click',()=>goTo(11));
+
+// ─── COUNTER ANIMATION ────────────────────────
+const fired = new Set();
+function fireCounters(slide){
+  slide.querySelectorAll('.ctr').forEach(el=>{
+    if(fired.has(el)) return;
+    fired.add(el);
+    const target = parseFloat(el.dataset.t);
+    const suffix = el.dataset.s||'';
+    const isFloat = target%1!==0;
+    const dur = 1600;
+    const t0 = performance.now();
+    function upd(now){
+      const p=Math.min((now-t0)/dur,1);
+      const ease=1-Math.pow(1-p,3);
+      const v=target*ease;
+      el.textContent=(isFloat?v.toFixed(1):Math.floor(v))+suffix;
+      if(p<1) requestAnimationFrame(upd);
+    }
+    requestAnimationFrame(upd);
+  });
+}
+</script>
+</body>
+</html>
